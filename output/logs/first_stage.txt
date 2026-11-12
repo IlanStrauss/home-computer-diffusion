@@ -1,26 +1,26 @@
 Sample: 178,891 consumer units, CE 1994-2013. Complete income reporters with positive income: 144,733.
 Replicate standard deviation of ell_t (BEA PC price) from the weights alone: at most 0.0017 log points
-[s1] Step 1: log spending, geography: 97s
-[s1_nogeo] Step 1, no geography (first run): 15s
-[s1_logit] Step 1, logit: 72s
-[s1_robit2] Step 1, robit (2 df): 138s
-[s1_int2] Step 1, units first seen at interview 2: 70s
-[s1_nostudent] Step 1, no student housing: 91s
-[s1_trim] Step 1, spending trimmed at 0.5% and 99.5%: 79s
-[s1_incl] Step 1, spending incl. insurance, pensions, contributions: 73s
-[s1_veh] Step 1, spending incl. vehicles: 70s
-[s2] Step 2: corrected spending, geography: 71s
-[s3_obs] Step 3 with observed spending: 101s
-[s3] Step 3: corrected spending, geography, traits: 110s
-[s3_robit7] Step 3, robit (7 df): 138s
-[s4] Step 4: step 3 plus education: 116s
-[s4_logit] Step 4, logit: 96s
-[s4_int2] Step 4, units first seen at interview 2: 83s
-[s4_incl] Step 4, spending incl. insurance, pensions, contributions: 114s
-[s4_veh] Step 4, spending incl. vehicles: 115s
-[s4_cr] Step 4, corrected spending, complete reporters with positive income: 103s
-[s4_inc] Step 4, current income, complete reporters with positive income: 93s
-[s4_cf] Step 4, spending with a control function for income, complete reporters with positive income: 102s
+[s1] Step 1: log spending, geography: 54s
+[s1_nogeo] Step 1, no geography (first run): 9s
+[s1_logit] Step 1, logit: 40s
+[s1_robit2] Step 1, robit (2 df): 75s
+[s1_int2] Step 1, units first seen at interview 2: 40s
+[s1_nostudent] Step 1, no student housing: 50s
+[s1_trim] Step 1, spending trimmed at 0.5% and 99.5%: 44s
+[s1_incl] Step 1, spending incl. insurance, pensions, contributions: 41s
+[s1_veh] Step 1, spending incl. vehicles: 39s
+[s2] Step 2: corrected spending, geography: 40s
+[s3_obs] Step 3 with observed spending: 54s
+[s3] Step 3: corrected spending, geography, traits: 59s
+[s3_robit7] Step 3, robit (7 df): 76s
+[s4] Step 4: step 3 plus education: 62s
+[s4_logit] Step 4, logit: 51s
+[s4_int2] Step 4, units first seen at interview 2: 45s
+[s4_incl] Step 4, spending incl. insurance, pensions, contributions: 62s
+[s4_veh] Step 4, spending incl. vehicles: 63s
+[s4_cr] Step 4, corrected spending, complete reporters with positive income: 56s
+[s4_inc] Step 4, current income, complete reporters with positive income: 51s
+[s4_cf] Step 4, spending with a control function for income, complete reporters with positive income: 57s
 
 === [s1] Step 1: log spending, geography
           n  own_pct     tau  se_tau   beta  se_beta   L_pc  se_L_pc   S_pc  se_S_pc  S_spend
@@ -613,4 +613,4 @@ Fake data: same units and weights; own = 1 if (ln s - tau_t)/sigma + z > 0, sigm
   A: price only: a = 10.801, b = 0.434, d = +0.0000; max |tau_hat - tau_true| / se = 1.84
   B: half the price effect plus drift: a = 10.801, b = 0.217, d = -0.0466; max |tau_hat - tau_true| / se = 2.05
 
-Wrote data/processed/first_stage.csv, first_stage_replicates.csv.gz, first_stage_fake.csv, first_stage_checks_s1.csv, first_stage_checks_s4.csv (320s)
+Wrote output/results/first_stage.csv, first_stage_replicates.csv.gz, and first_stage_fake.csv (173s)

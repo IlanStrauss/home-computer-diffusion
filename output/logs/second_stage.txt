@@ -410,8 +410,8 @@ Posterior medians with 90% intervals. Pure affordability: b = 1 and d = 0.
   max R-hat 1.0021; min bulk ESS 2511; min tail ESS 2887; divergent transitions 0
 
 ==== Prior predictive check (step 1, main price): thresholds under the priors alone ====
-  tau_1994 5% / 50% / 95%: 6.52 / 9.99 / 13.36 (observed 10.81)
-  tau_2013 - tau_1994 5% / 50% / 95%: -11.11 / -2.14 / 7.22 (observed -1.99)
+  tau_1994 5% / 50% / 95%: 6.55 / 9.99 / 13.35 (observed 10.81)
+  tau_2013 - tau_1994 5% / 50% / 95%: -11.12 / -2.14 / 7.23 (observed -1.99)
 
 ==== Posterior predictive check, main price: observed thresholds inside 90% predictive intervals ====
   [s1] 20 of 20 years inside; outside: none
@@ -460,4 +460,4 @@ B: half the price effect plus drift
            s3  correlated errors    20 0.41 [0.32, 0.51] -0.000 [-0.023, +0.024] 0.043  +0.97 -2.02 1.001   0
            s4  correlated errors    20 0.59 [0.45, 0.73] -0.003 [-0.038, +0.032] 0.059  +0.96 -2.92 1.002   0
 
-Wrote data/processed/second_stage.csv, second_stage_fitted.csv, and output/second_stage.pdf
+Wrote output/results/second_stage.csv, second_stage_fitted.csv, and output/diagnostics/second_stage.pdf

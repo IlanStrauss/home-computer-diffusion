@@ -93,4 +93,4 @@ G. F year by year (b median): model ownership (%) with the 1994 threshold and sl
  2011 23.903      75.680      27.246 78.759     80.907 80.436      -4.250 0.330
  2012 23.903      76.905      27.217 79.736     80.782 80.501      -4.370 0.351
 
-Wrote data/processed/income_price_years.csv, income_price_percentiles.csv, and income_price_paths.csv
+Wrote output/results/income_price_years.csv, income_price_percentiles.csv, and income_price_paths.csv

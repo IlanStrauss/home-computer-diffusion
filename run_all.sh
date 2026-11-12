@@ -2,7 +2,7 @@
 # Run every script in order, from the raw files to the figures and tables of the paper.
 #   sh run_all.sh            builds the datasets from data/raw/ (see data/README.md), then runs the analysis
 #   sh run_all.sh analysis   starts from the datasets in data/processed/ and runs the analysis only
-# Each script writes its log to output/logs/. About 90 minutes on a 10-core laptop, 55 of them for the joint model.
+# Each script writes its log to output/logs/. About 75 minutes on a 10-core laptop, an hour of it for the joint model.
 set -e
 cd "$(dirname "$0")"
 mkdir -p output/logs output/results output/diagnostics writeup/figures writeup/tables

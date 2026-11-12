@@ -56,9 +56,9 @@ python3 -c "import cmdstanpy; cmdstanpy.install_cmdstan(version='2.39.0')"
 Rscript -e 'install.packages(c("brms", "rstan", "loo", "posterior"))'
 ```
 
-The random seeds are fixed. The Bayesian fits use seed 20261109 (`second_stage.R`, `second_stage_constant.R`, `cps_switch.R`, and `joint_model.py`), the cross-validation folds of `link_choice.py` use seed 1994, and the fake-data checks of `first_stage.py` use seeds 20261109 and 20261110.
+The random seeds are fixed. The Bayesian fits use seed 20261109 (`second_stage.R`, `second_stage_constant.R`, `cps_switch.R`, and `joint_model.py`), and `second_stage.R` and `cps_switch.R` also seed R's own generator with 20261109 for their predictive checks. The cross-validation folds of `link_choice.py` use seed 1994, and the fake-data checks of `first_stage.py` use seeds 20261109 and 20261110. A fresh clone of this repository, run from the raw files on 11 and 12 November 2026, reproduced every processed dataset, estimate, and table exactly, except the joint model. The joint model sums its likelihood over years on parallel threads, and the order of that sum, and so its rounding, can change from run to run, so the joint model's estimates can differ in the last digit between runs.
 
-The full run takes about 90 minutes on a laptop with a 10-core Apple M4 processor and 24 GB of memory, 55 of them for the joint model. The raw files take 1.4 GB of disk space, and the processed data and outputs take 165 MB.
+The full run took 76 minutes on 11 November 2026 on a laptop with a 10-core Apple M4 processor and 24 GB of memory, 62 of them for the joint model. The raw files take 1.4 GB of disk space, and the processed data and outputs take 165 MB.
 
 ## How to reproduce the paper
 

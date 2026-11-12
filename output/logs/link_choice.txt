@@ -174,4 +174,4 @@ year
 Largest gap between links in tau_t - tau_1994: 0.208
 
 Summary (best link, choice under the rule): {'step 1: geography': ('robit2', 'robit2'), 'step 3: + traits': ('robit7', 'robit7'), 'step 4: + traits, education': ('robit7', 'probit')}
-Wrote data/processed/link_choice.csv, link_choice_cv.csv, and output/link_choice.pdf
+Wrote output/results/link_choice.csv, link_choice_cv.csv, and output/diagnostics/link_choice.pdf

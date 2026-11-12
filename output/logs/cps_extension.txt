@@ -1,4 +1,4 @@
-CE thresholds, step-5 specification (67s): tau_t, se, own %, mean reference date
+CE thresholds, step-5 specification (31s): tau_t, se, own %, mean reference date
           n  own_pct     tau  se_tau   beta      date
 year                                                 
 1994   9966   23.836  11.154   0.114  0.637  1994.336
@@ -77,4 +77,4 @@ year
 2001  2001.708  -2.455    -2.140        -1.627
 2003  2003.792  -2.951    -2.537        -1.875
 
-Wrote data/processed/cps_thresholds.csv, cps_validation.csv, and cps_ce_replicates.csv.gz
+Wrote output/results/cps_thresholds.csv and cps_validation.csv

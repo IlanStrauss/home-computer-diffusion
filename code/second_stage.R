@@ -25,6 +25,7 @@ suppressPackageStartupMessages({
   library(posterior)
 })
 options(width = 200, digits = 4)
+set.seed(20261109)  # posterior_predict() draws from R's generator, so seed it as well as Stan
 
 fs <- read.csv("output/results/first_stage.csv")
 reps <- read.csv("output/results/first_stage_replicates.csv.gz")

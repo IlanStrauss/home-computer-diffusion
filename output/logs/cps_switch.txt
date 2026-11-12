@@ -151,4 +151,4 @@ Largest Pareto k before refitting (points above 0.7 refitted exactly): one drift
 Posterior predictive check (main price, switch at 20%): observed thresholds inside 90% predictive intervals
   27 of 28 inside; outside: CPS 1993
 
-Wrote data/processed/cps_switch.csv and output/cps_switch.pdf
+Wrote output/results/cps_switch.csv and output/diagnostics/cps_switch.pdf

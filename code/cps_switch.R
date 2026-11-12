@@ -30,6 +30,7 @@ suppressPackageStartupMessages({
   library(posterior)
   library(loo)
 })
+set.seed(20261109)  # posterior_predict() draws from R's generator, so seed it as well as Stan
 options(width = 200, digits = 4)
 args <- commandArgs(trailingOnly = TRUE)
 t20 <- as.numeric(args[1])
