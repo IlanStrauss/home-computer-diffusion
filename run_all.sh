@@ -1,5 +1,5 @@
 #!/bin/sh
-# Run every script in order, from the raw files to the figures and tables of the paper.
+# Run every script in order, from the raw files to the estimates, figures, and tables.
 #   sh run_all.sh            builds the datasets from data/raw/ (see data/README.md), then runs the analysis
 #   sh run_all.sh analysis   starts from the datasets in data/processed/ and runs the analysis only
 # Each script writes its log to output/logs/. About 75 minutes on a 10-core laptop, an hour of it for the joint model.
@@ -39,4 +39,4 @@ run joint_model.py
 run joint_design_effect.py
 python3 code/figures.py
 python3 code/tables.py
-echo "$(date +%H:%M:%S) Done. To compile the paper and the online appendix, see step 4 of README.md."
+echo "$(date +%H:%M:%S) Done."

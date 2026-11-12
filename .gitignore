@@ -3,8 +3,9 @@ data/raw/ce/
 data/raw/cps/
 # Rebuilt from data/raw/ce by code/build_ce.py (66 MB)
 data/processed/ce_replicate_weights.csv.gz
-# Internal working notes
+# Internal working notes and the write-up, kept local
 MODEL_NOTE.md
+writeup/
 # LaTeX and system files
 *.aux
 *.log

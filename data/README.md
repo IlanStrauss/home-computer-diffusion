@@ -24,7 +24,7 @@ This folder holds the source data in `raw/` and the datasets that the build scri
 
 ## The combined household file
 
-`households_combined.csv.gz` holds the 178,891 CE households interviewed from January 1994 to March 2013 and the 425,627 CPS households interviewed in eight supplements from October 1984 to October 2003, one row per household, with the variables the two surveys share under common names and codes. It is for readers who want the data without the model; the paper's code reads `ce_units.csv.gz` and `cps_households.csv.gz`. Variables that only one survey records are blank for the other survey. Use `weight` for weighted shares and means within a survey and year.
+`households_combined.csv.gz` holds the 178,891 CE households interviewed from January 1994 to March 2013 and the 425,627 CPS households interviewed in eight supplements from October 1984 to October 2003, one row per household, with the variables the two surveys share under common names and codes. It is for readers who want the data without the model; the analysis code reads `ce_units.csv.gz` and `cps_households.csv.gz`. Variables that only one survey records are blank for the other survey. Use `weight` for weighted shares and means within a survey and year.
 
 | Variable | Meaning |
 |---|---|
@@ -34,7 +34,7 @@ This folder holds the source data in `raw/` and the datasets that the build scri
 | `ref_year`, `ref_month` | Year and month that the computer answer refers to: the inventory month (CE, see the reference-month rules below) or the supplement month (CPS) |
 | `owns_computer` | 1 if the household had a computer, 0 if not, blank if the household did not answer (0.8% of CPS households) |
 | `weight` | Survey weight, scaled to average 1 within each survey and year: the CE's `FINLWT21` with each quarter given an equal share of its year, or the CPS household weight |
-| `in_paper` | 1 for the 548,284 households that the paper's estimates use: every CE household, and the 369,393 CPS households that answered the computer question and have a positive weight, an income bracket, a state, and known household traits |
+| `in_paper` | 1 for the 548,284 households that our estimates use: every CE household, and the 369,393 CPS households that answered the computer question and have a positive weight, an income bracket, a state, and known household traits |
 | `age` | Age of the household head in years (the CE's reference person, the person who owns or rents the home, or the CPS reference person) |
 | `sex` | Sex of the household head: 1 male, 2 female |
 | `race3` | Race of the household head: `white`, `black`, or `other` (including more than one race) |
@@ -173,4 +173,4 @@ The starting point for the CE computer item is Schmitt and Wadsworth (2002, CEP 
 
 - Standard errors. The public files of these years carry no replicate weights or design codes. The CPS extension takes the CPS sampling error as the probit model's sandwich standard error times √2, an assumed design effect of 2.
 
-- The CPS extension imputes spending from the income bracket. In the five years both surveys cover, thresholds built on imputed spending fall more slowly than measured ones, by about a third when the imputation is applied to CE units themselves. CPS and CE thresholds are therefore not on the same footing (Appendix C.6 of the paper).
+- The CPS extension imputes spending from the income bracket. In the five years both surveys cover, thresholds built on imputed spending fall more slowly than measured ones, by about a third when the imputation is applied to CE units themselves. CPS and CE thresholds are therefore not on the same footing.
