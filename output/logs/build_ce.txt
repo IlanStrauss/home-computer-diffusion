@@ -1,0 +1,169 @@
+data/raw/ce/intrvw00.zip: 38,722 interviews, 97.8% with inventory, 0 computer purchase records
+data/raw/ce/intrvw01.zip: 38,004 interviews, 97.5% with inventory, 2,656 computer purchase records
+data/raw/ce/intrvw02.zip: 39,412 interviews, 97.4% with inventory, 2,697 computer purchase records
+data/raw/ce/intrvw03.zip: 40,374 interviews, 98.2% with inventory, 2,618 computer purchase records
+data/raw/ce/intrvw04.zip: 38,844 interviews, 99.6% with inventory, 2,435 computer purchase records
+data/raw/ce/intrvw05.zip: 35,625 interviews, 99.7% with inventory, 2,449 computer purchase records
+data/raw/ce/intrvw06.zip: 35,832 interviews, 99.8% with inventory, 2,447 computer purchase records
+data/raw/ce/intrvw07.zip: 34,249 interviews, 99.8% with inventory, 2,432 computer purchase records
+data/raw/ce/intrvw08.zip: 34,485 interviews, 99.8% with inventory, 2,495 computer purchase records
+data/raw/ce/intrvw09.zip: 35,227 interviews, 99.8% with inventory, 2,924 computer purchase records
+data/raw/ce/intrvw10.zip: 35,298 interviews, 99.9% with inventory, 2,875 computer purchase records
+data/raw/ce/intrvw11.zip: 33,828 interviews, 99.8% with inventory, 2,787 computer purchase records
+data/raw/ce/intrvw12.zip: 33,762 interviews, 99.8% with inventory, 2,872 computer purchase records
+data/raw/ce/intrvw13.zip: 32,591 interviews, 0.0% with inventory, 2,495 computer purchase records
+data/raw/ce/intrvw94.zip: 20,515 interviews, 99.1% with inventory, 642 computer purchase records
+data/raw/ce/intrvw95.zip: 24,653 interviews, 98.8% with inventory, 948 computer purchase records
+data/raw/ce/intrvw96.zip: 25,466 interviews, 98.5% with inventory, 1,157 computer purchase records
+data/raw/ce/intrvw97.zip: 27,797 interviews, 98.5% with inventory, 1,487 computer purchase records
+data/raw/ce/intrvw98.zip: 29,192 interviews, 98.6% with inventory, 1,823 computer purchase records
+data/raw/ce/intrvw99.zip: 37,916 interviews, 98.1% with inventory, 2,617 computer purchase records
+
+Interviews read: 671,792; duplicate NEWIDs across files dropped: 117,716
+Computer purchase records: 42,856; repeats from an earlier release dropped: 8,563
+Identical purchase rows within a release, kept as separate purchases: 192
+
+By interview year: interviews, CUs, share with inventory, weighted PC ownership (CPS benchmark), complete income reporters
+  1994: 20,515 10,078  99.1%  23.8% (  -  )  84.3%
+  1995: 19,777  9,771  98.8%  26.2% (  -  )  81.9%
+  1996: 23,310 13,203  98.6%  30.3% (  -  )  79.4%
+  1997: 22,183 11,016  98.5%  34.6% (36.6)  80.5%
+  1998: 22,177 11,070  98.6%  39.5% (42.1)  79.4%
+  1999: 30,056 15,147  98.2%  43.6% (  -  )  75.8%
+  2000: 31,010 15,415  97.8%  49.2% (51.0)  74.8%
+  2001: 30,313 15,205  97.5%  55.5% (56.3)  78.8%
+  2002: 31,326 15,650  97.4%  59.8% (  -  )  82.6%
+  2003: 32,398 16,125  97.9%  63.6% (61.8)  84.2%
+  2004: 31,085 15,632  99.6%  67.7% (  -  )  84.5%
+  2005: 33,147 19,151  99.7%  68.3% (  -  )  86.5%
+  2006: 28,867 14,676  99.8%  71.4% (  -  )  85.4%
+  2007: 27,335 13,648  99.8%  74.0% (  -  )  84.2%
+  2008: 27,545 13,788  99.8%  75.8% (  -  )  83.5%
+  2009: 28,029 13,975  99.8%  77.4% (  -  )  83.6%
+  2010: 28,429 14,231  99.9%  79.1% (  -  )  83.0%
+  2011: 26,990 13,684  99.8%  80.5% (  -  )  82.9%
+  2012: 26,993 13,589  99.8%  81.0% (  -  )  83.2%
+  2013: 26,108 13,162  25.9%  81.0% (  -  )  82.3%
+  2014:  6,483  6,483   0.0%     -  (  -  )  81.9%
+
+Weighted PC ownership (%) by income fifth (INC_RANK), complete income reporters
+fifth     1     2     3     4     5
+year                               
+1994   10.5  11.1  18.6  31.1  49.8
+1995   11.0  11.8  19.7  33.2  56.5
+1996   15.0  12.9  25.5  38.6  61.3
+1997   17.5  18.0  28.3  44.9  65.7
+1998   19.7  20.4  33.4  51.6  71.9
+1999   21.7  23.2  38.4  57.1  77.5
+2000   26.2  29.2  45.8  63.7  81.2
+2001   29.4  36.8  54.0  71.3  85.4
+2002   33.7  41.1  59.6  75.0  88.8
+2003   37.4  46.5  64.1  78.1  91.2
+2006   45.9  56.5  74.2  85.8  94.6
+2007   49.7  61.0  76.1  88.3  96.4
+2008   52.2  62.9  78.1  90.2  96.5
+2009   53.7  65.1  80.8  90.8  97.3
+2010   55.6  67.8  83.2  94.0  97.4
+2011   59.0  70.6  84.1  93.3  97.3
+2012   60.3  71.8  85.4  92.5  96.9
+2013   57.9  73.4  87.0  93.1  96.3
+
+Weighted PC ownership (%) by education of reference person
+educ4  lt_hs    hs  some_col   col
+year                              
+1994     5.6  15.7      30.1  43.7
+1995     5.5  15.7      33.2  50.8
+1996     7.4  20.4      36.8  55.4
+1997     9.6  22.9      40.5  60.4
+1998     9.7  27.2      47.1  65.4
+1999    12.9  30.7      50.7  69.0
+2000    15.7  38.5      57.0  74.5
+2001    21.6  42.6      64.0  80.5
+2002    23.6  49.6      68.1  82.4
+2003    27.0  52.7      73.2  85.5
+2004    30.9  55.8      77.3  87.7
+2005    32.4  57.9      77.6  87.7
+2006    36.6  60.7      79.9  90.6
+2007    40.4  63.6      82.1  92.3
+2008    42.3  66.2      84.4  91.9
+2009    45.4  67.6      84.8  93.4
+2010    49.5  69.2      86.8  94.1
+2011    49.0  72.5      86.8  94.4
+2012    49.5  72.2      88.0  94.3
+2013    50.9  71.7      87.5  93.4
+
+Weighted shares of interviews by year: Hispanic, black, and married reference person
+       hisp  black  married
+year                       
+1994  0.075  0.112    0.545
+1995  0.077  0.113    0.540
+1996  0.083  0.118    0.542
+1997  0.083  0.120    0.544
+1998  0.085  0.119    0.548
+1999  0.084  0.121    0.537
+2000  0.087  0.121    0.532
+2001  0.086  0.120    0.525
+2002  0.093  0.122    0.520
+2003  0.083  0.119    0.522
+2004  0.078  0.119    0.531
+2005  0.082  0.117    0.524
+2006  0.090  0.120    0.520
+2007  0.091  0.120    0.523
+2008  0.091  0.123    0.526
+2009  0.091  0.121    0.528
+2010  0.096  0.123    0.519
+2011  0.117  0.123    0.514
+2012  0.125  0.126    0.507
+2013  0.126  0.125    0.499
+2014  0.124  0.123    0.495
+
+By year: share of replicate-weight cells equal to zero, and personal insurance and pensions and cash contributions as weighted shares of total spending
+      zero_share  perins  cashco
+year                            
+1994         0.5   0.102   0.008
+1995         0.5   0.100   0.008
+1996         0.5   0.098   0.007
+1997         0.5   0.100   0.008
+1998         0.5   0.102   0.009
+1999         0.5   0.101   0.008
+2000         0.5   0.097   0.009
+2001         0.5   0.099   0.026
+2002         0.5   0.103   0.033
+2003         0.5   0.104   0.035
+2004         0.5   0.119   0.035
+2005         0.5   0.119   0.037
+2006         0.5   0.116   0.039
+2007         0.5   0.113   0.039
+2008         0.5   0.115   0.036
+2009         0.5   0.118   0.038
+2010         0.5   0.116   0.036
+2011         0.5   0.114   0.036
+2012         0.5   0.113   0.037
+2013         0.5   0.114   0.039
+2014         0.5   0.112   0.045
+hisp agrees with HISP_REF (2009Q2 on) in 98.71% of 143,032 interviews
+
+Computer purchases for own use (APB 640), price paid in current dollars, by interview year
+       count    25%    50%     75%     90%   mean
+year                                             
+1994   598.0  185.0  430.0  1500.0  2265.0  881.0
+1995   678.0  168.0  457.0  1800.0  2600.0  999.0
+1996   944.0  142.0  386.0  1755.0  2673.0  962.0
+1997  1025.0  126.0  321.0  1500.0  2400.0  857.0
+1998  1199.0  110.0  329.0  1300.0  2100.0  778.0
+1999  1817.0  113.0  322.0  1269.0  2000.0  749.0
+2000   638.0  114.0  320.0  1220.0  1916.0  757.0
+2001  1929.0   92.0  250.0  1000.0  1700.0  619.0
+2002  1938.0   78.0  232.0   988.0  1673.0  591.0
+2003  1950.0   80.0  212.0   819.0  1519.0  562.0
+2004  1742.0   85.0  266.0   900.0  1500.0  573.0
+2005  2092.0   94.0  289.0   868.0  1500.0  570.0
+2006  1815.0   90.0  299.0   877.0  1436.0  563.0
+2007  1778.0   79.0  248.0   806.0  1369.0  532.0
+2008  1791.0   92.0  312.0   850.0  1300.0  559.0
+2009  2110.0   75.0  266.0   700.0  1200.0  489.0
+2010  2072.0   80.0  300.0   675.0  1164.0  473.0
+2011  1997.0   99.0  321.0   700.0  1100.0  481.0
+2012  2014.0  134.0  414.0   700.0  1130.0  519.0
+2013  1838.0  110.0  350.0   650.0  1100.0  492.0
+2014   520.0  120.0  366.0   691.0  1200.0  527.0

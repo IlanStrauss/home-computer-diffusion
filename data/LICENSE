@@ -1,0 +1,9 @@
+The data files in data/processed/ and output/results/ are licensed under the Creative Commons
+Attribution 4.0 International License (CC BY 4.0): https://creativecommons.org/licenses/by/4.0/
+
+Cite them as: Ilan Strauss (2026), home-computer-diffusion, https://github.com/IlanStrauss/home-computer-diffusion
+
+They are built from public-use files of the US Bureau of Labor Statistics, the US Census Bureau, and the
+US Bureau of Economic Analysis, which are works of the US government and in the public domain. The
+copies of BEA and BLS price files in data/raw/prices/ are unchanged and remain in the public domain.
+The code in this repository is licensed separately under the MIT License (see LICENSE in the top folder).

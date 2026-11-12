@@ -1,0 +1,96 @@
+Step-1 second stage, main price: b = 0.450 [0.367, 0.538]
+
+A. Complete income reporters with positive income, 1994-2012: 142,957 of 176,688 units (19.1% without). McFadden R2 of a probit on each measure alone:
+ year     n  r2_spending  r2_income  ratio
+ 1994  8338        0.115      0.084  0.734
+ 1995  4940        0.128      0.081  0.633
+ 1996  7549        0.097      0.060  0.615
+ 1997  5588        0.118      0.071  0.600
+ 1998  5384        0.110      0.074  0.676
+ 1999  8225        0.114      0.074  0.655
+ 2000  7099        0.123      0.082  0.668
+ 2001  7489        0.118      0.073  0.621
+ 2002  8178        0.129      0.084  0.656
+ 2003  8572        0.109      0.076  0.699
+ 2004  8351        0.129      0.095  0.739
+ 2005 11785        0.120      0.082  0.682
+ 2006  7745        0.126      0.083  0.659
+ 2007  7206        0.142      0.090  0.632
+ 2008  7332        0.132      0.085  0.644
+ 2009  7459        0.120      0.086  0.716
+ 2010  7482        0.131      0.100  0.761
+ 2011  7137        0.137      0.075  0.545
+ 2012  7098        0.133      0.087  0.650
+income's R2 as a share of spending's: 0.54 to 0.76; spending fits better in 19 of 19 years
+
+B and C. By year (step 1): ownership (actual and model), the spending threshold, the % of units spending less than it, median long-run spending, and the rise in ownership (percentage points) from a 10% fall in the price (b median and 90%) and from a 10% rise in every unit's spending
+ year    own  own_model    tau  spend_tau  beta  pct_below_tau  median_s  dP_price10  dP_price10_lo  dP_price10_hi  dP_spend10
+ 1994 23.836     23.903 10.807  49357.799 0.827         94.768  19219.95       1.099          0.894          1.316       2.236
+ 1995 26.573     27.176 10.660  42613.971 0.874         90.857  19724.00       1.225          0.997          1.467       2.489
+ 1996 30.779     30.867 10.614  40688.032 0.754         88.233  19954.00       1.147          0.934          1.373       2.323
+ 1997 35.159     35.205 10.452  34608.342 0.826         79.575  21070.50       1.297          1.056          1.551       2.622
+ 1998 40.801     40.971 10.258  28505.421 0.825         68.396  21471.00       1.353          1.103          1.618       2.729
+ 1999 44.544     44.771 10.156  25740.162 0.826         60.650  21846.00       1.371          1.118          1.639       2.761
+ 2000 50.138     50.564  9.976  21496.117 0.824         47.221  22417.00       1.372          1.119          1.640       2.756
+ 2001 56.888     57.355  9.763  17370.713 0.790         32.670  23072.00       1.296          1.058          1.548       2.596
+ 2002 60.261     60.785  9.667  15790.534 0.823         26.772  23521.20       1.305          1.065          1.558       2.609
+ 2003 64.211     64.650  9.452  12729.239 0.702         17.594  23578.00       1.110          0.906          1.325       2.217
+ 2004 67.856     68.326  9.446  12655.376 0.836         15.236  24842.00       1.214          0.992          1.449       2.419
+ 2005 68.485     68.794  9.437  12542.218 0.776         14.087  26037.00       1.141          0.932          1.362       2.275
+ 2006 71.590     71.874  9.383  11882.723 0.773          9.875  27967.00       1.084          0.885          1.293       2.157
+ 2007 73.876     74.204  9.414  12257.504 0.850          8.446  29896.00       1.119          0.915          1.334       2.222
+ 2008 75.810     76.254  9.353  11535.099 0.855          6.828  30768.00       1.076          0.879          1.282       2.134
+ 2009 77.342     77.843  9.173   9631.457 0.779          4.802  29594.00       0.960          0.784          1.144       1.903
+ 2010 79.338     79.693  9.117   9110.851 0.813          3.904  29394.00       0.942          0.770          1.123       1.866
+ 2011 80.436     80.907  9.120   9136.185 0.828          3.692  30712.00       0.922          0.754          1.098       1.823
+ 2012 80.501     80.782  9.156   9475.701 0.843          3.916  31033.00       0.939          0.768          1.119       1.857
+10% price fall: 1.10 pp in 1994, peak 1.37 in 2000, 0.94 in 2012
+ratio of spending to price effect, every year: 1.98 to 2.03
+
+Peak of the unit-level response to a 10% price fall (percentile, pp):
+  1994: percentile 94, 1.56 pp; at the 10th, 50th, 90th percentiles: 0.55, 1.17, 1.55
+  1998: percentile 67, 1.56 pp; at the 10th, 50th, 90th percentiles: 1.01, 1.53, 1.43
+  2003: percentile 17, 1.33 pp; at the 10th, 50th, 90th percentiles: 1.31, 1.20, 0.80
+  2008: percentile 6, 1.62 pp; at the 10th, 50th, 90th percentiles: 1.60, 1.12, 0.52
+  2012: percentile 4, 1.59 pp; at the 10th, 50th, 90th percentiles: 1.51, 0.95, 0.39
+
+D. Balance, 1994 to 2012 (step 1). Price change -4.020 log points; median long-run spending $19,220 to $31,033 (+0.479 log points). Actual ownership 23.8% to 80.5%; model 23.9% to 80.8% (rise 56.9 points).
+Spending growth alone (1994 threshold): +12.5 points
+b median (0.450): price alone (1994 spending) +49.3; price with 2012 spending +47.1; spending with the 1994 price +12.5, with the 2012 price +10.2; both +59.5; Shapley price 48.2 (81%), spending 11.3 (19%); left for drift and slope -2.7; affordability shift at the median: price 1.81, spending 0.48 log points (21% from spending)
+b 5% (0.367): price alone (1994 spending) +40.7; price with 2012 spending +40.4; spending with the 1994 price +12.5, with the 2012 price +12.1; both +52.8; Shapley price 40.6 (77%), spending 12.3 (23%); left for drift and slope +4.1; affordability shift at the median: price 1.47, spending 0.48 log points (25% from spending)
+b 95% (0.538): price alone (1994 spending) +57.1; price with 2012 spending +52.6; spending with the 1994 price +12.5, with the 2012 price +8.0; both +65.1; Shapley price 54.9 (84%), spending 10.2 (16%); left for drift and slope -8.2; affordability shift at the median: price 2.16, spending 0.48 log points (18% from spending)
+
+E. WLS of beta_t on ell_t, 1994-2012 (main price)
+s1: gamma +0.0060 [-0.0099, +0.0218] (residual scale 0.48); change in beta over the price fall -2.9% [-10.8%, +4.9%] of mean beta 0.812
+s2: gamma +0.0104 [-0.0073, +0.0280] (residual scale 0.57); change in beta over the price fall -4.6% [-12.3%, +3.2%] of mean beta 0.911
+s3: gamma +0.0043 [-0.0142, +0.0228] (residual scale 1.29); change in beta over the price fall -1.8% [-9.8%, +6.1%] of mean beta 0.937
+s4: gamma +0.0011 [-0.0182, +0.0205] (residual scale 1.34); change in beta over the price fall -0.7% [-11.7%, +10.4%] of mean beta 0.701
+
+F. Balance in constant dollars. PCE prices rose 0.351 log points, 1994 to 2012 (year means over units). Computer price relative to all consumer prices -4.370; median long-run spending +0.129 log points ($21,857 in 1994 dollars). Real spending growth alone +3.3 points
+b median (0.450): price alone +53.0; price with 2012 spending +52.5; spending with the 2012 price +2.8; both +55.8; Shapley price 52.8 (94%), spending 3.1 (6%); left +1.0; shift at the median: price 1.97, spending 0.13 log points (6% from spending)
+b 5% (0.367): price alone +44.2; price with 2012 spending +44.3; spending with the 2012 price +3.4; both +47.6; Shapley price 44.2 (93%), spending 3.4 (7%); left +9.3; shift at the median: price 1.60, spending 0.13 log points (7% from spending)
+b 95% (0.538): price alone +60.6; price with 2012 spending +59.4; spending with the 2012 price +2.1; both +62.7; Shapley price 60.0 (96%), spending 2.7 (4%); left -5.9; shift at the median: price 2.35, spending 0.13 log points (5% from spending)
+
+G. F year by year (b median): model ownership (%) with the 1994 threshold and slope when only the real price, only real spending, or both move to year t; the model's and the actual ownership
+ year  start  price_only  spend_only   both  own_model    own  real_price  infl
+ 1994 23.903      23.903      23.903 23.903     23.903 23.836       0.000 0.000
+ 1995 23.903      25.902      24.100 26.108     27.176 26.573      -0.190 0.017
+ 1996 23.903      29.291      23.991 29.369     30.867 30.779      -0.495 0.036
+ 1997 23.903      34.331      24.770 35.288     35.205 35.159      -0.922 0.056
+ 1998 23.903      39.544      24.773 40.546     40.971 40.801      -1.339 0.068
+ 1999 23.903      44.533      25.273 46.077     44.771 44.544      -1.724 0.080
+ 2000 23.903      49.113      25.246 50.571     50.564 50.138      -2.072 0.101
+ 2001 23.903      53.449      25.540 55.171     57.355 56.888      -2.401 0.123
+ 2002 23.903      57.561      25.644 59.272     60.785 60.261      -2.717 0.138
+ 2003 23.903      60.983      25.210 62.085     64.650 64.211      -2.984 0.157
+ 2004 23.903      63.438      25.948 65.310     68.326 67.856      -3.179 0.180
+ 2005 23.903      65.574      26.530 68.029     68.794 68.485      -3.353 0.204
+ 2006 23.903      68.112      27.643 71.643     71.874 71.590      -3.566 0.235
+ 2007 23.903      69.969      28.431 74.291     74.204 73.876      -3.725 0.261
+ 2008 23.903      71.665      28.203 75.740     76.254 75.810      -3.876 0.288
+ 2009 23.903      73.284      27.192 76.334     77.843 77.342      -4.023 0.297
+ 2010 23.903      74.465      26.805 77.121     79.693 79.338      -4.133 0.308
+ 2011 23.903      75.680      27.246 78.759     80.907 80.436      -4.250 0.330
+ 2012 23.903      76.905      27.217 79.736     80.782 80.501      -4.370 0.351
+
+Wrote data/processed/income_price_years.csv, income_price_percentiles.csv, and income_price_paths.csv

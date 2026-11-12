@@ -1,0 +1,21 @@
+1994: 9,966 units; calibration s2u 0.072, v 0.171, mean lambda 0.848
+1995: 6,153 units; calibration s2u 0.115, v 0.172, mean lambda 0.781
+1996: 9,664 units; calibration s2u 0.087, v 0.184, mean lambda 0.820
+1997: 7,020 units; calibration s2u 0.076, v 0.194, mean lambda 0.866
+1998: 7,023 units; calibration s2u 0.078, v 0.182, mean lambda 0.855
+1999: 11,003 units; calibration s2u 0.085, v 0.198, mean lambda 0.848
+2000: 9,725 units; calibration s2u 0.080, v 0.203, mean lambda 0.866
+2001: 9,436 units; calibration s2u 0.085, v 0.199, mean lambda 0.857
+2002: 9,969 units; calibration s2u 0.088, v 0.212, mean lambda 0.858
+2003: 10,246 units; calibration s2u 0.084, v 0.229, mean lambda 0.873
+2004: 9,936 units; calibration s2u 0.079, v 0.219, mean lambda 0.864
+2005: 13,743 units; calibration s2u 0.083, v 0.209, mean lambda 0.838
+2006: 9,248 units; calibration s2u 0.076, v 0.220, mean lambda 0.876
+2007: 8,680 units; calibration s2u 0.076, v 0.212, mean lambda 0.875
+2008: 8,976 units; calibration s2u 0.073, v 0.199, mean lambda 0.870
+2009: 9,098 units; calibration s2u 0.073, v 0.208, mean lambda 0.877
+2010: 9,214 units; calibration s2u 0.069, v 0.200, mean lambda 0.876
+2011: 8,809 units; calibration s2u 0.070, v 0.204, mean lambda 0.877
+2012: 8,779 units; calibration s2u 0.072, v 0.200, mean lambda 0.872
+2013: 2,203 units; calibration s2u 0.067, v 0.225, mean lambda 0.887
+Wrote 178,891 units, 29 geography groups, 19 traits

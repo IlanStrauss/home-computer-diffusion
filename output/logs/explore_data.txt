@@ -1,0 +1,62 @@
+Sample: 178,891 consumer units, CE 1994-2013
+
+Log long-run spending by year: weighted mean, SD, skewness, excess kurtosis; units beyond 3 and 4 SDs; units under $2,000 a year
+        mean     sd   skew  excess_kurtosis      n  below_minus3sd  below_minus4sd  above_3sd  under_2000
+year                                                                                                     
+1994   9.839  0.630 -0.228            0.390   9966              44               8         13          13
+1995   9.867  0.627 -0.164            0.595   6153              30               7          9          14
+1996   9.873  0.648 -0.348            1.090   9664              53               9         15          20
+1997   9.925  0.659 -0.362            1.099   7020              48              12          9          23
+1998   9.938  0.650 -0.316            0.808   7023              36               9         13          19
+1999   9.969  0.664 -0.324            1.350  11003              57              12         22          22
+2000   9.985  0.678 -0.551            2.074   9725              66              26         15          30
+2001  10.019  0.673 -0.364            1.184   9436              53               9         15          19
+2002  10.036  0.684 -0.546            1.812   9969              71              22          5          36
+2003  10.034  0.695 -0.696            3.649  10246              70              24         17          34
+2004  10.089  0.690 -0.534            1.820   9936              81              32         14          40
+2005  10.141  0.686 -0.479            2.147  13743              87              28         22          39
+2006  10.218  0.681 -0.445            1.917   9248              58              18         15          20
+2007  10.281  0.667 -0.418            1.902   8680              53              17         15          17
+2008  10.300  0.657 -0.446            1.780   8976              53              20         14          18
+2009  10.268  0.662 -0.554            2.175   9098              77              25          9          25
+2010  10.264  0.660 -0.529            2.781   9214              68              22         23          22
+2011  10.307  0.647 -0.533            2.227   8809              63              19         16          18
+2012  10.325  0.651 -0.338            1.399   8779              47              16         17          14
+2013  10.312  0.689 -1.228            7.634   2203              17               8          2           8
+
+Units more than 3 SDs below their year's mean ln s: 1,132 (0.63%)
+  below -3 SD: own 65.7%; one interview 55.7%; student housing 59.0%; age under 25 82.1%; median income $3,000 (complete reporters)
+  everyone else: own 59.4%; one interview 18.6%; student housing 1.2%; age under 25 9.9%; median income $35,000 (complete reporters)
+
+The 15 lowest and 10 highest long-run spenders (tenure 6 = student housing)
+ year          s  n_interviews  age  tenure  fam_size    educ4  income  own
+ 2003  44.000400             2   20       4         1 some_col     0.0    1
+ 2010  56.000000             1   20       6         1 some_col  2000.0    1
+ 2013  68.000000             1   21       4         1 some_col  2100.0    1
+ 2002  76.000000             1   19       6         1 some_col  3500.0    1
+ 2007  86.666800             3   18       4         1 some_col     0.0    1
+ 2003  99.999600             1   19       6         1 some_col     0.0    1
+ 2013 104.000000             1   17       4         1 some_col     0.0    1
+ 2005 121.333067             3   18       6         1       hs     NaN    1
+ 1996 124.000000             1   18       6         1 some_col  2300.0    0
+ 2003 140.000000             2   18       4         1 some_col   300.0    1
+ 2005 140.000000             1   19       6         1 some_col     NaN    1
+ 2000 160.000000             1   19       6         1 some_col  3800.0    0
+ 2005 204.000000             1   21       6         1       hs     NaN    1
+ 2009 207.999600             1   25       5         1 some_col  1100.0    0
+ 2006 221.999800             2   19       4         1       hs     0.0    1
+ year            s  n_interviews  age  tenure  fam_size    educ4   income  own
+ 2001 1673747.1660             4   70       2         4      col      0.0    0
+ 1999  791630.0000             4   80       2         1       hs 202878.0    0
+ 2009  726620.2424             2   42       1         4      col 246510.0    1
+ 2010  680267.5000             2   25       2         1      col 489006.0    1
+ 1997  569317.5160             1   57       2         2       hs      0.0    1
+ 2007  561821.4296             2   38       1         6      col 425503.0    1
+ 2009  544183.1716             1   40       1         5 some_col 268401.0    1
+ 2010  540412.0000             2   42       1         4      col 588013.0    1
+ 2010  536351.2500             4   57       1         2      col 774770.0    1
+ 2012  535806.0000             2   47       1         4      col  41000.0    1
+
+Correlation of ln s with log current income (complete reporters, positive income; none in 2004-05): 0.63 to 0.70 by year
+
+Wrote output/diagnostics/explore_data.pdf

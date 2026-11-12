@@ -1,0 +1,463 @@
+Second stage: tau_hat_t ~ N(tau_t, se_t^2), tau_t = a + b ell_t + d (t - 1994) + e_t, e_t ~ N(0, omega^2)
+Posterior medians with 90% intervals. Pure affordability: b = 1 and d = 0.
+
+==== Main specifications, every price concept ====
+
+[s1] BEA PCE price index, PCs (main); independent errors; 20 years (1994-2013)
+  a (1994 threshold, log $)                        10.807  [ 10.763,  10.849]
+  b (threshold shift per log point of price)        0.450  [  0.367,   0.538]
+  d (leftover drift, log points a year)             0.005  [ -0.016,   0.028]
+  omega (year deviations, log points)               0.029  [  0.004,   0.060]
+  Change in the threshold 1994-2013: observed -1.987; from the price, b x -4.081 = -1.836 [-2.195, -1.497]; from drift, d x 19 = 0.104 [-0.295, 0.532]
+  Posterior correlation of b and d: +0.98
+  max R-hat 1.0031; min bulk ESS 1583; min tail ESS 1034; divergent transitions 0
+
+[s1] BEA PCE price index, information processing equipment; independent errors; 20 years (1994-2013)
+  a (1994 threshold, log $)                        10.834  [ 10.775,  10.892]
+  b (threshold shift per log point of price)        0.455  [  0.358,   0.557]
+  d (leftover drift, log points a year)            -0.014  [ -0.034,   0.006]
+  omega (year deviations, log points)               0.045  [  0.016,   0.078]
+  Change in the threshold 1994-2013: observed -1.987; from the price, b x -3.351 = -1.524 [-1.868, -1.200]; from drift, d x 19 = -0.271 [-0.651, 0.123]
+  Posterior correlation of b and d: +0.96
+  max R-hat 1.0020; min bulk ESS 1910; min tail ESS 1534; divergent transitions 0
+
+[s1] BEA investment price index, computers; independent errors; 20 years (1994-2013)
+  a (1994 threshold, log $)                        10.836  [ 10.765,  10.904]
+  b (threshold shift per log point of price)        0.616  [  0.466,   0.774]
+  d (leftover drift, log points a year)            -0.011  [ -0.034,   0.014]
+  omega (year deviations, log points)               0.058  [  0.032,   0.096]
+  Change in the threshold 1994-2013: observed -1.987; from the price, b x -2.541 = -1.565 [-1.968, -1.184]; from drift, d x 19 = -0.205 [-0.645, 0.263]
+  Posterior correlation of b and d: +0.97
+  max R-hat 1.0022; min bulk ESS 1876; min tail ESS 2377; divergent transitions 0
+
+[s1] BLS CPI-U, PCs (1999-2013); independent errors; 15 years (1999-2013)
+  a (1994 threshold, log $)                         9.942  [  9.797,  10.109]
+  b (threshold shift per log point of price)        0.633  [  0.436,   0.794]
+  d (leftover drift, log points a year)             0.038  [  0.001,   0.070]
+  omega (year deviations, log points)               0.023  [  0.003,   0.073]
+  Change in the threshold 1999-2013: observed -1.336; from the price, b x -2.430 = -1.539 [-1.928, -1.059]; from drift, d x 14 = 0.537 [0.011, 0.980]
+  Posterior correlation of b and d: +0.98
+  max R-hat 1.0042; min bulk ESS 1102; min tail ESS 1014; divergent transitions 0
+
+[s1] CE price paid, weighted median; independent errors; 20 years (1994-2013)
+  a (1994 threshold, log $)                        10.732  [ 10.669,  10.794]
+  b (threshold shift per log point of price)        0.754  [  0.554,   0.964]
+  d (leftover drift, log points a year)            -0.087  [ -0.095,  -0.079]
+  omega (year deviations, log points)               0.066  [  0.042,   0.102]
+  Change in the threshold 1994-2013: observed -1.987; from the price, b x -0.049 = -0.037 [-0.047, -0.027]; from drift, d x 19 = -1.653 [-1.797, -1.504]
+  Posterior correlation of b and d: +0.54
+  max R-hat 1.0019; min bulk ESS 3648; min tail ESS 3562; divergent transitions 0
+
+[s1] CE price paid, weighted 90th percentile; independent errors; 20 years (1994-2013)
+  a (1994 threshold, log $)                        10.526  [ 10.366,  10.688]
+  b (threshold shift per log point of price)        0.769  [ -0.065,   1.593]
+  d (leftover drift, log points a year)            -0.063  [ -0.103,  -0.025]
+  omega (year deviations, log points)               0.140  [  0.101,   0.200]
+  Change in the threshold 1994-2013: observed -1.987; from the price, b x -0.635 = -0.488 [-1.011, 0.041]; from drift, d x 19 = -1.204 [-1.948, -0.467]
+  Posterior correlation of b and d: +0.96
+  max R-hat 1.0026; min bulk ESS 1780; min tail ESS 2463; divergent transitions 0
+
+[s2] BEA PCE price index, PCs (main); independent errors; 20 years (1994-2013)
+  a (1994 threshold, log $)                        10.699  [ 10.653,  10.743]
+  b (threshold shift per log point of price)        0.389  [  0.310,   0.472]
+  d (leftover drift, log points a year)             0.005  [ -0.015,   0.026]
+  omega (year deviations, log points)               0.034  [  0.009,   0.065]
+  Change in the threshold 1994-2013: observed -1.732; from the price, b x -4.081 = -1.588 [-1.926, -1.265]; from drift, d x 19 = 0.089 [-0.292, 0.486]
+  Posterior correlation of b and d: +0.97
+  max R-hat 1.0028; min bulk ESS 1761; min tail ESS 963; divergent transitions 0
+
+[s2] BEA PCE price index, information processing equipment; independent errors; 20 years (1994-2013)
+  a (1994 threshold, log $)                        10.722  [ 10.662,  10.779]
+  b (threshold shift per log point of price)        0.393  [  0.297,   0.489]
+  d (leftover drift, log points a year)            -0.012  [ -0.032,   0.007]
+  omega (year deviations, log points)               0.047  [  0.024,   0.080]
+  Change in the threshold 1994-2013: observed -1.732; from the price, b x -3.351 = -1.316 [-1.638, -0.996]; from drift, d x 19 = -0.237 [-0.603, 0.128]
+  Posterior correlation of b and d: +0.96
+  max R-hat 1.0023; min bulk ESS 2064; min tail ESS 2311; divergent transitions 0
+
+[s2] BEA investment price index, computers; independent errors; 20 years (1994-2013)
+  a (1994 threshold, log $)                        10.724  [ 10.660,  10.787]
+  b (threshold shift per log point of price)        0.531  [  0.394,   0.671]
+  d (leftover drift, log points a year)            -0.009  [ -0.031,   0.012]
+  omega (year deviations, log points)               0.056  [  0.033,   0.089]
+  Change in the threshold 1994-2013: observed -1.732; from the price, b x -2.541 = -1.350 [-1.706, -1.001]; from drift, d x 19 = -0.180 [-0.583, 0.231]
+  Posterior correlation of b and d: +0.96
+  max R-hat 1.0017; min bulk ESS 2103; min tail ESS 2594; divergent transitions 0
+
+[s2] BLS CPI-U, PCs (1999-2013); independent errors; 15 years (1999-2013)
+  a (1994 threshold, log $)                         9.947  [  9.818,  10.087]
+  b (threshold shift per log point of price)        0.555  [  0.390,   0.702]
+  d (leftover drift, log points a year)             0.034  [  0.003,   0.064]
+  omega (year deviations, log points)               0.020  [  0.002,   0.063]
+  Change in the threshold 1999-2013: observed -1.151; from the price, b x -2.430 = -1.349 [-1.705, -0.947]; from drift, d x 14 = 0.482 [0.040, 0.893]
+  Posterior correlation of b and d: +0.98
+  max R-hat 1.0024; min bulk ESS 1406; min tail ESS 1150; divergent transitions 0
+
+[s2] CE price paid, weighted median; independent errors; 20 years (1994-2013)
+  a (1994 threshold, log $)                        10.636  [ 10.577,  10.694]
+  b (threshold shift per log point of price)        0.654  [  0.468,   0.842]
+  d (leftover drift, log points a year)            -0.075  [ -0.082,  -0.068]
+  omega (year deviations, log points)               0.062  [  0.041,   0.096]
+  Change in the threshold 1994-2013: observed -1.732; from the price, b x -0.049 = -0.032 [-0.041, -0.023]; from drift, d x 19 = -1.430 [-1.556, -1.292]
+  Posterior correlation of b and d: +0.52
+  max R-hat 1.0007; min bulk ESS 3769; min tail ESS 3408; divergent transitions 0
+
+[s2] CE price paid, weighted 90th percentile; independent errors; 20 years (1994-2013)
+  a (1994 threshold, log $)                        10.457  [ 10.310,  10.603]
+  b (threshold shift per log point of price)        0.675  [ -0.090,   1.405]
+  d (leftover drift, log points a year)            -0.054  [ -0.090,  -0.019]
+  omega (year deviations, log points)               0.123  [  0.088,   0.177]
+  Change in the threshold 1994-2013: observed -1.732; from the price, b x -0.635 = -0.428 [-0.892, 0.057]; from drift, d x 19 = -1.034 [-1.714, -0.369]
+  Posterior correlation of b and d: +0.96
+  max R-hat 1.0021; min bulk ESS 1963; min tail ESS 2114; divergent transitions 0
+
+[s3] BEA PCE price index, PCs (main); independent errors; 20 years (1994-2013)
+  a (1994 threshold, log $)                        10.795  [ 10.739,  10.846]
+  b (threshold shift per log point of price)        0.406  [  0.320,   0.491]
+  d (leftover drift, log points a year)            -0.002  [ -0.023,   0.019]
+  omega (year deviations, log points)               0.043  [  0.021,   0.073]
+  Change in the threshold 1994-2013: observed -2.022; from the price, b x -4.081 = -1.658 [-2.003, -1.306]; from drift, d x 19 = -0.039 [-0.432, 0.363]
+  Posterior correlation of b and d: +0.97
+  max R-hat 1.0014; min bulk ESS 1958; min tail ESS 2384; divergent transitions 0
+
+[s3] BEA PCE price index, information processing equipment; independent errors; 20 years (1994-2013)
+  a (1994 threshold, log $)                        10.817  [ 10.746,  10.883]
+  b (threshold shift per log point of price)        0.403  [  0.300,   0.505]
+  d (leftover drift, log points a year)            -0.021  [ -0.041,  -0.001]
+  omega (year deviations, log points)               0.055  [  0.033,   0.089]
+  Change in the threshold 1994-2013: observed -2.022; from the price, b x -3.351 = -1.352 [-1.693, -1.006]; from drift, d x 19 = -0.404 [-0.782, -0.024]
+  Posterior correlation of b and d: +0.96
+  max R-hat 1.0027; min bulk ESS 2326; min tail ESS 2499; divergent transitions 0
+
+[s3] BEA investment price index, computers; independent errors; 20 years (1994-2013)
+  a (1994 threshold, log $)                        10.811  [ 10.728,  10.890]
+  b (threshold shift per log point of price)        0.538  [  0.369,   0.703]
+  d (leftover drift, log points a year)            -0.019  [ -0.044,   0.006]
+  omega (year deviations, log points)               0.069  [  0.043,   0.106]
+  Change in the threshold 1994-2013: observed -2.022; from the price, b x -2.541 = -1.366 [-1.785, -0.938]; from drift, d x 19 = -0.363 [-0.835, 0.115]
+  Posterior correlation of b and d: +0.97
+  max R-hat 1.0022; min bulk ESS 2166; min tail ESS 2423; divergent transitions 0
+
+[s3] BLS CPI-U, PCs (1999-2013); independent errors; 15 years (1999-2013)
+  a (1994 threshold, log $)                        10.005  [  9.868,  10.159]
+  b (threshold shift per log point of price)        0.614  [  0.417,   0.772]
+  d (leftover drift, log points a year)             0.034  [ -0.003,   0.065]
+  omega (year deviations, log points)               0.033  [  0.005,   0.076]
+  Change in the threshold 1999-2013: observed -1.486; from the price, b x -2.430 = -1.492 [-1.876, -1.013]; from drift, d x 14 = 0.476 [-0.041, 0.905]
+  Posterior correlation of b and d: +0.98
+  max R-hat 1.0035; min bulk ESS 1337; min tail ESS 1450; divergent transitions 0
+
+[s3] CE price paid, weighted median; independent errors; 20 years (1994-2013)
+  a (1994 threshold, log $)                        10.718  [ 10.656,  10.781]
+  b (threshold shift per log point of price)        0.671  [  0.484,   0.860]
+  d (leftover drift, log points a year)            -0.084  [ -0.091,  -0.078]
+  omega (year deviations, log points)               0.063  [  0.040,   0.100]
+  Change in the threshold 1994-2013: observed -2.022; from the price, b x -0.049 = -0.033 [-0.042, -0.024]; from drift, d x 19 = -1.604 [-1.738, -1.473]
+  Posterior correlation of b and d: +0.49
+  max R-hat 1.0012; min bulk ESS 3885; min tail ESS 3436; divergent transitions 0
+
+[s3] CE price paid, weighted 90th percentile; independent errors; 20 years (1994-2013)
+  a (1994 threshold, log $)                        10.521  [ 10.365,  10.679]
+  b (threshold shift per log point of price)        0.800  [ -0.019,   1.557]
+  d (leftover drift, log points a year)            -0.059  [ -0.097,  -0.022]
+  omega (year deviations, log points)               0.124  [  0.089,   0.176]
+  Change in the threshold 1994-2013: observed -2.022; from the price, b x -0.635 = -0.508 [-0.988, 0.012]; from drift, d x 19 = -1.117 [-1.849, -0.412]
+  Posterior correlation of b and d: +0.97
+  max R-hat 1.0054; min bulk ESS 1367; min tail ESS 1900; divergent transitions 0
+
+[s4] BEA PCE price index, PCs (main); independent errors; 20 years (1994-2013)
+  a (1994 threshold, log $)                        11.146  [ 11.055,  11.227]
+  b (threshold shift per log point of price)        0.587  [  0.456,   0.719]
+  d (leftover drift, log points a year)            -0.005  [ -0.037,   0.029]
+  omega (year deviations, log points)               0.062  [  0.028,   0.108]
+  Change in the threshold 1994-2013: observed -2.918; from the price, b x -4.081 = -2.394 [-2.932, -1.859]; from drift, d x 19 = -0.089 [-0.698, 0.547]
+  Posterior correlation of b and d: +0.97
+  max R-hat 1.0019; min bulk ESS 2318; min tail ESS 1575; divergent transitions 0
+
+[s4] BEA PCE price index, information processing equipment; independent errors; 20 years (1994-2013)
+  a (1994 threshold, log $)                        11.179  [ 11.071,  11.279]
+  b (threshold shift per log point of price)        0.591  [  0.427,   0.763]
+  d (leftover drift, log points a year)            -0.030  [ -0.063,   0.004]
+  omega (year deviations, log points)               0.079  [  0.043,   0.131]
+  Change in the threshold 1994-2013: observed -2.918; from the price, b x -3.351 = -1.979 [-2.556, -1.431]; from drift, d x 19 = -0.574 [-1.199, 0.076]
+  Posterior correlation of b and d: +0.96
+  max R-hat 1.0026; min bulk ESS 1757; min tail ESS 2164; divergent transitions 0
+
+[s4] BEA investment price index, computers; independent errors; 20 years (1994-2013)
+  a (1994 threshold, log $)                        11.169  [ 11.053,  11.283]
+  b (threshold shift per log point of price)        0.787  [  0.554,   1.040]
+  d (leftover drift, log points a year)            -0.027  [ -0.063,   0.012]
+  omega (year deviations, log points)               0.096  [  0.058,   0.152]
+  Change in the threshold 1994-2013: observed -2.918; from the price, b x -2.541 = -1.998 [-2.643, -1.407]; from drift, d x 19 = -0.512 [-1.191, 0.230]
+  Posterior correlation of b and d: +0.97
+  max R-hat 1.0016; min bulk ESS 2133; min tail ESS 2430; divergent transitions 0
+
+[s4] BLS CPI-U, PCs (1999-2013); independent errors; 15 years (1999-2013)
+  a (1994 threshold, log $)                         9.969  [  9.746,  10.196]
+  b (threshold shift per log point of price)        0.930  [  0.666,   1.182]
+  d (leftover drift, log points a year)             0.056  [  0.005,   0.106]
+  omega (year deviations, log points)               0.043  [  0.007,   0.103]
+  Change in the threshold 1999-2013: observed -2.172; from the price, b x -2.430 = -2.260 [-2.871, -1.617]; from drift, d x 14 = 0.788 [0.066, 1.481]
+  Posterior correlation of b and d: +0.98
+  max R-hat 1.0084; min bulk ESS 1174; min tail ESS 944; divergent transitions 0
+
+[s4] CE price paid, weighted median; independent errors; 20 years (1994-2013)
+  a (1994 threshold, log $)                        11.021  [ 10.930,  11.114]
+  b (threshold shift per log point of price)        0.963  [  0.667,   1.267]
+  d (leftover drift, log points a year)            -0.123  [ -0.134,  -0.111]
+  omega (year deviations, log points)               0.094  [  0.059,   0.146]
+  Change in the threshold 1994-2013: observed -2.918; from the price, b x -0.049 = -0.047 [-0.062, -0.033]; from drift, d x 19 = -2.331 [-2.537, -2.111]
+  Posterior correlation of b and d: +0.54
+  max R-hat 1.0009; min bulk ESS 3785; min tail ESS 3522; divergent transitions 0
+
+[s4] CE price paid, weighted 90th percentile; independent errors; 20 years (1994-2013)
+  a (1994 threshold, log $)                        10.745  [ 10.540,  10.950]
+  b (threshold shift per log point of price)        1.083  [  0.088,   2.059]
+  d (leftover drift, log points a year)            -0.089  [ -0.136,  -0.041]
+  omega (year deviations, log points)               0.172  [  0.118,   0.248]
+  Change in the threshold 1994-2013: observed -2.918; from the price, b x -0.635 = -0.687 [-1.307, -0.056]; from drift, d x 19 = -1.694 [-2.591, -0.783]
+  Posterior correlation of b and d: +0.96
+  max R-hat 1.0025; min bulk ESS 1684; min tail ESS 2126; divergent transitions 0
+
+==== Checks, main price ====
+
+[s1_nogeo] BEA PCE price index, PCs (main); independent errors; 20 years (1994-2013)
+  a (1994 threshold, log $)                        10.815  [ 10.770,  10.857]
+  b (threshold shift per log point of price)        0.452  [  0.367,   0.541]
+  d (leftover drift, log points a year)             0.005  [ -0.018,   0.028]
+  omega (year deviations, log points)               0.027  [  0.004,   0.059]
+  Change in the threshold 1994-2013: observed -1.995; from the price, b x -4.081 = -1.844 [-2.209, -1.499]; from drift, d x 19 = 0.088 [-0.336, 0.527]
+  Posterior correlation of b and d: +0.98
+  max R-hat 1.0031; min bulk ESS 1535; min tail ESS 940; divergent transitions 0
+
+[s1_logit] BEA PCE price index, PCs (main); independent errors; 20 years (1994-2013)
+  a (1994 threshold, log $)                        10.753  [ 10.714,  10.792]
+  b (threshold shift per log point of price)        0.408  [  0.336,   0.489]
+  d (leftover drift, log points a year)             0.002  [ -0.016,   0.023]
+  omega (year deviations, log points)               0.029  [  0.005,   0.058]
+  Change in the threshold 1994-2013: observed -1.815; from the price, b x -4.081 = -1.665 [-1.994, -1.370]; from drift, d x 19 = 0.046 [-0.307, 0.437]
+  Posterior correlation of b and d: +0.97
+  max R-hat 1.0022; min bulk ESS 1507; min tail ESS 999; divergent transitions 0
+
+[s1_robit2] BEA PCE price index, PCs (main); independent errors; 20 years (1994-2013)
+  a (1994 threshold, log $)                        10.689  [ 10.651,  10.725]
+  b (threshold shift per log point of price)        0.370  [  0.302,   0.446]
+  d (leftover drift, log points a year)             0.003  [ -0.015,   0.023]
+  omega (year deviations, log points)               0.029  [  0.008,   0.055]
+  Change in the threshold 1994-2013: observed -1.566; from the price, b x -4.081 = -1.510 [-1.819, -1.232]; from drift, d x 19 = 0.053 [-0.285, 0.430]
+  Posterior correlation of b and d: +0.98
+  max R-hat 1.0016; min bulk ESS 2109; min tail ESS 1398; divergent transitions 0
+
+[s1_int2] BEA PCE price index, PCs (main); independent errors; 20 years (1994-2013)
+  a (1994 threshold, log $)                        10.729  [ 10.686,  10.770]
+  b (threshold shift per log point of price)        0.419  [  0.358,   0.481]
+  d (leftover drift, log points a year)             0.014  [ -0.001,   0.029]
+  omega (year deviations, log points)               0.025  [  0.004,   0.050]
+  Change in the threshold 1994-2013: observed -1.400; from the price, b x -4.104 = -1.718 [-1.974, -1.467]; from drift, d x 19 = 0.268 [-0.013, 0.557]
+  Posterior correlation of b and d: +0.97
+  max R-hat 1.0015; min bulk ESS 1747; min tail ESS 1039; divergent transitions 0
+
+[s1_nostudent] BEA PCE price index, PCs (main); independent errors; 20 years (1994-2013)
+  a (1994 threshold, log $)                        10.717  [ 10.680,  10.752]
+  b (threshold shift per log point of price)        0.383  [  0.324,   0.444]
+  d (leftover drift, log points a year)             0.006  [ -0.008,   0.021]
+  omega (year deviations, log points)               0.022  [  0.004,   0.048]
+  Change in the threshold 1994-2013: observed -1.752; from the price, b x -4.082 = -1.562 [-1.813, -1.322]; from drift, d x 19 = 0.113 [-0.161, 0.397]
+  Posterior correlation of b and d: +0.97
+  max R-hat 1.0025; min bulk ESS 1889; min tail ESS 1668; divergent transitions 0
+
+[s1_trim] BEA PCE price index, PCs (main); independent errors; 20 years (1994-2013)
+  a (1994 threshold, log $)                        10.740  [ 10.700,  10.778]
+  b (threshold shift per log point of price)        0.445  [  0.383,   0.505]
+  d (leftover drift, log points a year)             0.019  [  0.004,   0.033]
+  omega (year deviations, log points)               0.027  [  0.006,   0.052]
+  Change in the threshold 1994-2013: observed -1.537; from the price, b x -4.081 = -1.816 [-2.060, -1.565]; from drift, d x 19 = 0.353 [0.074, 0.633]
+  Posterior correlation of b and d: +0.97
+  max R-hat 1.0031; min bulk ESS 1894; min tail ESS 1199; divergent transitions 0
+
+[s1_incl] BEA PCE price index, PCs (main); independent errors; 20 years (1994-2013)
+  a (1994 threshold, log $)                        10.916  [ 10.876,  10.954]
+  b (threshold shift per log point of price)        0.436  [  0.361,   0.513]
+  d (leftover drift, log points a year)             0.003  [ -0.016,   0.023]
+  omega (year deviations, log points)               0.020  [  0.002,   0.050]
+  Change in the threshold 1994-2013: observed -1.976; from the price, b x -4.081 = -1.781 [-2.093, -1.474]; from drift, d x 19 = 0.063 [-0.302, 0.436]
+  Posterior correlation of b and d: +0.97
+  max R-hat 1.0030; min bulk ESS 1645; min tail ESS 1100; divergent transitions 0
+
+[s1_veh] BEA PCE price index, PCs (main); independent errors; 20 years (1994-2013)
+  a (1994 threshold, log $)                        11.017  [ 10.969,  11.064]
+  b (threshold shift per log point of price)        0.541  [  0.456,   0.632]
+  d (leftover drift, log points a year)             0.013  [ -0.009,   0.036]
+  omega (year deviations, log points)               0.030  [  0.005,   0.065]
+  Change in the threshold 1994-2013: observed -2.249; from the price, b x -4.081 = -2.209 [-2.579, -1.862]; from drift, d x 19 = 0.249 [-0.164, 0.676]
+  Posterior correlation of b and d: +0.97
+  max R-hat 1.0024; min bulk ESS 1894; min tail ESS 1371; divergent transitions 0
+
+[s3_obs] BEA PCE price index, PCs (main); independent errors; 20 years (1994-2013)
+  a (1994 threshold, log $)                        10.988  [ 10.922,  11.046]
+  b (threshold shift per log point of price)        0.521  [  0.422,   0.627]
+  d (leftover drift, log points a year)             0.003  [ -0.021,   0.028]
+  omega (year deviations, log points)               0.047  [  0.021,   0.081]
+  Change in the threshold 1994-2013: observed -2.468; from the price, b x -4.081 = -2.126 [-2.560, -1.721]; from drift, d x 19 = 0.057 [-0.396, 0.538]
+  Posterior correlation of b and d: +0.97
+  max R-hat 1.0012; min bulk ESS 1940; min tail ESS 1788; divergent transitions 0
+
+[s3_robit7] BEA PCE price index, PCs (main); independent errors; 20 years (1994-2013)
+  a (1994 threshold, log $)                        10.780  [ 10.723,  10.833]
+  b (threshold shift per log point of price)        0.414  [  0.333,   0.501]
+  d (leftover drift, log points a year)             0.003  [ -0.016,   0.024]
+  omega (year deviations, log points)               0.044  [  0.022,   0.074]
+  Change in the threshold 1994-2013: observed -1.903; from the price, b x -4.081 = -1.690 [-2.044, -1.358]; from drift, d x 19 = 0.064 [-0.312, 0.465]
+  Posterior correlation of b and d: +0.97
+  max R-hat 1.0018; min bulk ESS 2034; min tail ESS 1851; divergent transitions 0
+
+[s4_logit] BEA PCE price index, PCs (main); independent errors; 20 years (1994-2013)
+  a (1994 threshold, log $)                        11.138  [ 11.047,  11.221]
+  b (threshold shift per log point of price)        0.605  [  0.467,   0.747]
+  d (leftover drift, log points a year)             0.004  [ -0.029,   0.039]
+  omega (year deviations, log points)               0.063  [  0.030,   0.110]
+  Change in the threshold 1994-2013: observed -2.845; from the price, b x -4.081 = -2.470 [-3.047, -1.907]; from drift, d x 19 = 0.077 [-0.542, 0.734]
+  Posterior correlation of b and d: +0.97
+  max R-hat 1.0016; min bulk ESS 2370; min tail ESS 2350; divergent transitions 0
+
+[s4_int2] BEA PCE price index, PCs (main); independent errors; 20 years (1994-2013)
+  a (1994 threshold, log $)                        11.101  [ 11.010,  11.187]
+  b (threshold shift per log point of price)        0.580  [  0.454,   0.708]
+  d (leftover drift, log points a year)             0.003  [ -0.026,   0.034]
+  omega (year deviations, log points)               0.051  [  0.014,   0.096]
+  Change in the threshold 1994-2013: observed -2.217; from the price, b x -4.104 = -2.379 [-2.904, -1.864]; from drift, d x 19 = 0.057 [-0.496, 0.643]
+  Posterior correlation of b and d: +0.97
+  max R-hat 1.0032; min bulk ESS 1877; min tail ESS 1252; divergent transitions 0
+
+[s4_incl] BEA PCE price index, PCs (main); independent errors; 20 years (1994-2013)
+  a (1994 threshold, log $)                        11.244  [ 11.161,  11.321]
+  b (threshold shift per log point of price)        0.543  [  0.417,   0.675]
+  d (leftover drift, log points a year)            -0.014  [ -0.045,   0.019]
+  omega (year deviations, log points)               0.052  [  0.019,   0.100]
+  Change in the threshold 1994-2013: observed -2.917; from the price, b x -4.081 = -2.218 [-2.753, -1.701]; from drift, d x 19 = -0.269 [-0.853, 0.358]
+  Posterior correlation of b and d: +0.97
+  max R-hat 1.0019; min bulk ESS 1870; min tail ESS 1462; divergent transitions 0
+
+[s4_veh] BEA PCE price index, PCs (main); independent errors; 20 years (1994-2013)
+  a (1994 threshold, log $)                        11.586  [ 11.464,  11.694]
+  b (threshold shift per log point of price)        0.880  [  0.711,   1.053]
+  d (leftover drift, log points a year)             0.031  [ -0.009,   0.073]
+  omega (year deviations, log points)               0.071  [  0.031,   0.125]
+  Change in the threshold 1994-2013: observed -3.597; from the price, b x -4.081 = -3.592 [-4.297, -2.902]; from drift, d x 19 = 0.593 [-0.167, 1.388]
+  Posterior correlation of b and d: +0.97
+  max R-hat 1.0022; min bulk ESS 1623; min tail ESS 2044; divergent transitions 0
+
+[s4_cr] BEA PCE price index, PCs (main); independent errors; 20 years (1994-2013)
+  a (1994 threshold, log $)                        11.083  [ 10.992,  11.168]
+  b (threshold shift per log point of price)        0.520  [  0.379,   0.660]
+  d (leftover drift, log points a year)            -0.013  [ -0.048,   0.022]
+  omega (year deviations, log points)               0.063  [  0.032,   0.107]
+  Change in the threshold 1994-2013: observed -2.460; from the price, b x -4.083 = -2.123 [-2.695, -1.547]; from drift, d x 19 = -0.242 [-0.904, 0.419]
+  Posterior correlation of b and d: +0.97
+  max R-hat 1.0022; min bulk ESS 2246; min tail ESS 2336; divergent transitions 0
+
+[s4_inc] BEA PCE price index, PCs (main); independent errors; 20 years (1994-2013)
+  a (1994 threshold, log $)                        13.863  [ 13.439,  14.280]
+  b (threshold shift per log point of price)        1.383  [  0.858,   1.945]
+  d (leftover drift, log points a year)            -0.171  [ -0.297,  -0.037]
+  omega (year deviations, log points)               0.259  [  0.123,   0.414]
+  Change in the threshold 1994-2013: observed -6.917; from the price, b x -4.083 = -5.647 [-7.941, -3.502]; from drift, d x 19 = -3.245 [-5.646, -0.705]
+  Posterior correlation of b and d: +0.96
+  max R-hat 1.0054; min bulk ESS 1886; min tail ESS 1649; divergent transitions 0
+
+[s4_cf] BEA PCE price index, PCs (main); independent errors; 20 years (1994-2013)
+  a (1994 threshold, log $)                        10.889  [ 10.772,  11.006]
+  b (threshold shift per log point of price)        0.520  [  0.368,   0.679]
+  d (leftover drift, log points a year)             0.019  [ -0.018,   0.056]
+  omega (year deviations, log points)               0.073  [  0.033,   0.130]
+  Change in the threshold 1994-2013: observed -1.512; from the price, b x -4.083 = -2.121 [-2.772, -1.502]; from drift, d x 19 = 0.355 [-0.334, 1.072]
+  Posterior correlation of b and d: +0.97
+  max R-hat 1.0034; min bulk ESS 2086; min tail ESS 1326; divergent transitions 0
+
+==== Covariance check: correlated sampling errors from the replicates ====
+
+[s1] replicate correlation by lag 1-5, 10, 15: +0.40 +0.35 +0.26 +0.15 +0.15 +0.09 +0.06; fitted R_st = 0.47 x 0.82^|s-t|
+
+[s1] BEA PCE price index, PCs (main); correlated errors; 20 years (1994-2013)
+  a (1994 threshold, log $)                        10.809  [ 10.752,  10.865]
+  b (threshold shift per log point of price)        0.448  [  0.352,   0.546]
+  d (leftover drift, log points a year)             0.007  [ -0.018,   0.032]
+  omega (year deviations, log points)               0.028  [  0.007,   0.058]
+  Change in the threshold 1994-2013: observed -1.987; from the price, b x -4.081 = -1.827 [-2.227, -1.437]; from drift, d x 19 = 0.131 [-0.349, 0.614]
+  Posterior correlation of b and d: +0.96
+  max R-hat 1.0011; min bulk ESS 1936; min tail ESS 2400; divergent transitions 0
+
+[s3] replicate correlation by lag 1-5, 10, 15: +0.21 +0.22 +0.16 +0.10 +0.12 +0.04 +0.03; fitted R_st = 0.27 x 0.84^|s-t|
+
+[s3] BEA PCE price index, PCs (main); correlated errors; 20 years (1994-2013)
+  a (1994 threshold, log $)                        10.799  [ 10.734,  10.861]
+  b (threshold shift per log point of price)        0.410  [  0.318,   0.506]
+  d (leftover drift, log points a year)            -0.000  [ -0.023,   0.024]
+  omega (year deviations, log points)               0.043  [  0.022,   0.074]
+  Change in the threshold 1994-2013: observed -2.022; from the price, b x -4.081 = -1.673 [-2.065, -1.299]; from drift, d x 19 = -0.005 [-0.430, 0.447]
+  Posterior correlation of b and d: +0.97
+  max R-hat 1.0011; min bulk ESS 2470; min tail ESS 3656; divergent transitions 0
+
+[s4] replicate correlation by lag 1-5, 10, 15: +0.12 +0.14 +0.11 +0.06 +0.08 +0.00 -0.01; fitted R_st = 0.18 x 0.82^|s-t|
+
+[s4] BEA PCE price index, PCs (main); correlated errors; 20 years (1994-2013)
+  a (1994 threshold, log $)                        11.150  [ 11.053,  11.244]
+  b (threshold shift per log point of price)        0.590  [  0.448,   0.732]
+  d (leftover drift, log points a year)            -0.003  [ -0.038,   0.032]
+  omega (year deviations, log points)               0.059  [  0.027,   0.105]
+  Change in the threshold 1994-2013: observed -2.918; from the price, b x -4.081 = -2.406 [-2.985, -1.830]; from drift, d x 19 = -0.051 [-0.719, 0.617]
+  Posterior correlation of b and d: +0.96
+  max R-hat 1.0021; min bulk ESS 2511; min tail ESS 2887; divergent transitions 0
+
+==== Prior predictive check (step 1, main price): thresholds under the priors alone ====
+  tau_1994 5% / 50% / 95%: 6.52 / 9.99 / 13.36 (observed 10.81)
+  tau_2013 - tau_1994 5% / 50% / 95%: -11.11 / -2.14 / 7.22 (observed -1.99)
+
+==== Posterior predictive check, main price: observed thresholds inside 90% predictive intervals ====
+  [s1] 20 of 20 years inside; outside: none
+  [s2] 20 of 20 years inside; outside: none
+  [s3] 19 of 20 years inside; outside: 2003
+  [s4] 19 of 20 years inside; outside: 2003
+
+==== Fake-data check: thresholds estimated from ownership simulated with known a, b, d, omega ====
+
+A: price only
+  a (1994 threshold, log $)                        10.796  [ 10.756,  10.840]  true  10.801  inside
+  b (threshold shift per log point of price)        0.385  [  0.329,   0.448]  true   0.434  inside
+  d (leftover drift, log points a year)            -0.012  [ -0.026,   0.002]  true   0.000  inside
+  omega (year deviations, log points)               0.032  [  0.016,   0.054]  true   0.030  inside
+
+B: half the price effect plus drift
+  a (1994 threshold, log $)                        10.791  [ 10.755,  10.827]  true  10.801  inside
+  b (threshold shift per log point of price)        0.238  [  0.189,   0.289]  true   0.217  inside
+  d (leftover drift, log points a year)            -0.040  [ -0.052,  -0.028]  true  -0.047  inside
+  omega (year deviations, log points)               0.025  [  0.012,   0.042]  true   0.030  inside
+
+==== Summary, main price (posterior medians and 90% intervals) ====
+         spec              model years                 b                       d omega cor_bd  dtau  rhat div
+           s1 independent errors    20 0.45 [0.37, 0.54] +0.005 [-0.016, +0.028] 0.029  +0.98 -1.99 1.003   0
+           s2 independent errors    20 0.39 [0.31, 0.47] +0.005 [-0.015, +0.026] 0.034  +0.97 -1.73 1.003   0
+           s3 independent errors    20 0.41 [0.32, 0.49] -0.002 [-0.023, +0.019] 0.043  +0.97 -2.02 1.001   0
+           s4 independent errors    20 0.59 [0.46, 0.72] -0.005 [-0.037, +0.029] 0.062  +0.97 -2.92 1.002   0
+     s1_nogeo independent errors    20 0.45 [0.37, 0.54] +0.005 [-0.018, +0.028] 0.027  +0.98 -2.00 1.003   0
+     s1_logit independent errors    20 0.41 [0.34, 0.49] +0.002 [-0.016, +0.023] 0.029  +0.97 -1.82 1.002   0
+    s1_robit2 independent errors    20 0.37 [0.30, 0.45] +0.003 [-0.015, +0.023] 0.029  +0.98 -1.57 1.002   0
+      s1_int2 independent errors    20 0.42 [0.36, 0.48] +0.014 [-0.001, +0.029] 0.025  +0.97 -1.40 1.001   0
+ s1_nostudent independent errors    20 0.38 [0.32, 0.44] +0.006 [-0.008, +0.021] 0.022  +0.97 -1.75 1.003   0
+      s1_trim independent errors    20 0.44 [0.38, 0.50] +0.019 [+0.004, +0.033] 0.027  +0.97 -1.54 1.003   0
+      s1_incl independent errors    20 0.44 [0.36, 0.51] +0.003 [-0.016, +0.023] 0.020  +0.97 -1.98 1.003   0
+       s1_veh independent errors    20 0.54 [0.46, 0.63] +0.013 [-0.009, +0.036] 0.030  +0.97 -2.25 1.002   0
+       s3_obs independent errors    20 0.52 [0.42, 0.63] +0.003 [-0.021, +0.028] 0.047  +0.97 -2.47 1.001   0
+    s3_robit7 independent errors    20 0.41 [0.33, 0.50] +0.003 [-0.016, +0.024] 0.044  +0.97 -1.90 1.002   0
+     s4_logit independent errors    20 0.61 [0.47, 0.75] +0.004 [-0.029, +0.039] 0.063  +0.97 -2.85 1.002   0
+      s4_int2 independent errors    20 0.58 [0.45, 0.71] +0.003 [-0.026, +0.034] 0.051  +0.97 -2.22 1.003   0
+      s4_incl independent errors    20 0.54 [0.42, 0.67] -0.014 [-0.045, +0.019] 0.052  +0.97 -2.92 1.002   0
+       s4_veh independent errors    20 0.88 [0.71, 1.05] +0.031 [-0.009, +0.073] 0.071  +0.97 -3.60 1.002   0
+        s4_cr independent errors    20 0.52 [0.38, 0.66] -0.013 [-0.048, +0.022] 0.063  +0.97 -2.46 1.002   0
+       s4_inc independent errors    20 1.38 [0.86, 1.95] -0.171 [-0.297, -0.037] 0.259  +0.96 -6.92 1.005   0
+        s4_cf independent errors    20 0.52 [0.37, 0.68] +0.019 [-0.018, +0.056] 0.073  +0.97 -1.51 1.003   0
+           s1  correlated errors    20 0.45 [0.35, 0.55] +0.007 [-0.018, +0.032] 0.028  +0.96 -1.99 1.001   0
+           s3  correlated errors    20 0.41 [0.32, 0.51] -0.000 [-0.023, +0.024] 0.043  +0.97 -2.02 1.001   0
+           s4  correlated errors    20 0.59 [0.45, 0.73] -0.003 [-0.038, +0.032] 0.059  +0.96 -2.92 1.002   0
+
+Wrote data/processed/second_stage.csv, second_stage_fitted.csv, and output/second_stage.pdf

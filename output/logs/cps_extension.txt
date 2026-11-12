@@ -1,0 +1,80 @@
+CE thresholds, step-5 specification (67s): tau_t, se, own %, mean reference date
+          n  own_pct     tau  se_tau   beta      date
+year                                                 
+1994   9966   23.836  11.154   0.114  0.637  1994.336
+1995   6153   26.573  11.004   0.090  0.685  1995.161
+1996   9664   30.779  10.926   0.076  0.594  1996.072
+1997   7020   35.159  10.749   0.081  0.624  1997.155
+1998   7023   40.801  10.449   0.044  0.658  1998.154
+1999  11003   44.544  10.298   0.032  0.635  1999.102
+2000   9725   50.138  10.000   0.030  0.579  2000.150
+2001   9436   56.888   9.684   0.048  0.592  2001.151
+2002   9969   60.261   9.559   0.056  0.664  2002.151
+2003  10246   64.211   9.145   0.121  0.489  2003.150
+2004   9936   67.856   9.199   0.095  0.638  2004.145
+2005  13743   68.485   9.146   0.102  0.595  2005.070
+2006   9248   71.590   8.767   0.139  0.500  2006.148
+2007   8680   73.876   8.985   0.128  0.628  2007.152
+2008   8976   75.810   8.877   0.168  0.635  2008.142
+2009   9098   77.342   8.673   0.145  0.597  2009.146
+2010   9214   79.338   8.692   0.160  0.663  2010.143
+2011   8809   80.436   8.581   0.164  0.646  2011.151
+2012   8779   80.501   8.691   0.168  0.670  2012.144
+2013   2203   80.601   8.035   0.752  0.484  2012.778
+
+CPS households: interviewed, answered the computer question (weighted ownership %), and kept (income bracket and traits known; weighted ownership %)
+      households  own_answering   kept  own_kept
+year                                            
+1984       56736            8.2  51162       8.2
+1989       56786           15.0  50475      15.2
+1993       55809           23.0  50886      23.5
+1997       47996           36.8  42458      38.2
+1998       48070           42.3  41618      44.1
+2000       47673           51.1  40011      53.4
+2001       56634           56.6  47351      59.0
+2003       55923           61.8  45432      64.4
+Ownership passes 20% (CPS, all answering households): 1992.30 by linear interpolation, 1992.44 by log-odds interpolation, between surveys at 1989.79 (15.0%) and 1993.79 (23.0%)
+Ownership passes 30% (CPS, all answering households): 1995.83 by linear interpolation, 1995.96 by log-odds interpolation, between surveys at 1993.79 (23.0%) and 1997.79 (36.8%)
+
+Mapping sample: 30,638 CE complete income reporters with positive income and a known region, 1994-1998; 1994 dollars (PCE price index)
+
+CPS thresholds (imputed long-run spending; step-5 specification)
+          date      n  own_pct     tau   beta  theta_ed_lt_hs  theta_ed_some_col  theta_ed_col  se_map  se_samp  se_tau  pareto_alpha    top_mean  map_slope_at_mean  map_r2  map_resid_sd
+year                                                                                                                                                                                      
+1984  1984.792  51162    8.183  11.342  0.915          -0.250              0.195         0.176   0.025    0.129   0.131         2.978  112918.128              0.342   0.586         0.411
+1989  1989.792  50475   15.249  11.318  0.775          -0.233              0.375         0.604   0.027    0.112   0.115         2.597  121976.863              0.335   0.584         0.412
+1993  1993.792  50886   23.523  10.725  1.061          -0.208              0.316         0.523   0.013    0.043   0.044         2.303  132573.400              0.323   0.581         0.413
+1997  1997.792  42458   38.154  10.376  1.096          -0.210              0.284         0.492   0.007    0.021   0.022         2.064  145486.910              0.311   0.579         0.414
+1998  1998.958  41618   44.050  10.214  1.138          -0.185              0.281         0.465   0.005    0.014   0.015         1.890  159287.525              0.301   0.578         0.415
+2000  2000.625  40011   53.381  10.013  1.233          -0.196              0.255         0.373   0.005    0.010   0.011         1.674  186210.165              0.284   0.577         0.415
+2001  2001.708  47351   58.974   9.877  1.206          -0.223              0.214         0.352   0.007    0.012   0.014         1.590  202077.052              0.276   0.576         0.416
+2003  2003.792  45432   64.445   9.703  1.094          -0.235              0.321         0.452   0.010    0.020   0.022         2.343  261717.113              0.337   0.585         0.411
+
+Validation: CPS against CE thresholds from the same specification (CE interpolated to the CPS month)
+      cps_tau  cps_se  ce_tau  ce_se    gap  gap_in_se
+year                                                  
+1997   10.376   0.022  10.558  0.058 -0.182     -2.937
+1998   10.214   0.015  10.321  0.034 -0.106     -2.851
+2000   10.013   0.011   9.850  0.038  0.163      4.092
+2001    9.877   0.014   9.614  0.052  0.263      4.866
+2003    9.703   0.022   9.179  0.104  0.523      4.902
+The same imputation applied to CE units (complete reporters) in the CE year, against CE fits on the same units with corrected and with observed spending (point estimates)
+  1997: imputed 10.504 (beta 0.876); corrected 10.702 (beta 0.673); observed 10.853 (beta 0.557)
+  1998: imputed 10.335 (beta 0.840); corrected 10.453 (beta 0.655); observed 10.549 (beta 0.545)
+  2000: imputed 9.992 (beta 0.832); corrected 9.997 (beta 0.609); observed 9.991 (beta 0.510)
+  2001: imputed 9.778 (beta 0.824); corrected 9.703 (beta 0.640); observed 9.622 (beta 0.520)
+  2003: imputed 9.542 (beta 0.814); corrected 9.296 (beta 0.577); observed 9.136 (beta 0.478)
+
+Prices at the CPS months (ell, log points relative to the CE's 1994 average)
+          date  ell_pc  ell_info  ell_business
+year                                          
+1984  1984.792   1.609     1.449         1.203
+1989  1989.792   0.954     0.891         0.607
+1993  1993.792   0.079     0.075         0.072
+1997  1997.792  -1.120    -1.070        -0.815
+1998  1998.958  -1.593    -1.466        -1.140
+2000  2000.625  -2.104    -1.866        -1.432
+2001  2001.708  -2.455    -2.140        -1.627
+2003  2003.792  -2.951    -2.537        -1.875
+
+Wrote data/processed/cps_thresholds.csv, cps_validation.csv, and cps_ce_replicates.csv.gz

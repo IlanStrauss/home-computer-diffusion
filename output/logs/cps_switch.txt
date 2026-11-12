@@ -1,0 +1,154 @@
+Step 6: 28 thresholds (8 CPS, 20 CE). Switch dates: 20% at 1992.44, 30% at 1995.96.
+Posterior medians [90% intervals]. pre = d1 (drift before the switch), post = d2 (after), cps = offset o,
+ell = b, sigma = omega, trend = the single drift d.
+
+======== Price: pc ========
+
+One drift
+  Intercept     10.957 [ 10.793,  11.116]
+  cps            0.011 [ -0.163,   0.194]
+  ell            0.461 [  0.202,   0.718]
+  trend         -0.023 [ -0.087,   0.041]
+  sigma          0.212 [  0.162,   0.282]
+  max R-hat 1.0012; min bulk ESS 3170; min tail ESS 3805; divergent transitions 0
+
+Switch at 20% ownership (1992.44)
+  Intercept     11.152 [ 10.998,  11.316]
+  cps            0.041 [ -0.106,   0.182]
+  ell            0.386 [  0.174,   0.609]
+  pre            0.065 [ -0.004,   0.134]
+  post          -0.056 [ -0.110,   0.001]
+  sigma          0.169 [  0.128,   0.227]
+  d2 - d1       -0.121 [ -0.176,  -0.064]
+  max R-hat 1.0027; min bulk ESS 2846; min tail ESS 3481; divergent transitions 0
+
+Switch at 30% ownership (1995.96)
+  Intercept     11.071 [ 10.891,  11.255]
+  cps            0.067 [ -0.068,   0.198]
+  ell            0.465 [  0.269,   0.668]
+  pre            0.052 [ -0.007,   0.112]
+  post          -0.044 [ -0.093,   0.008]
+  sigma          0.150 [  0.112,   0.205]
+  d2 - d1       -0.096 [ -0.132,  -0.060]
+  max R-hat 1.0018; min bulk ESS 1704; min tail ESS 2502; divergent transitions 0
+
+Leave-one-out comparison (elpd difference from the best model, with its standard error)
+              elpd_diff se_diff elpd_loo p_loo
+switch at 30%     0.000   0.000    4.888 5.476
+switch at 20%    -3.759   2.070    1.130 6.701
+one drift        -8.727   4.505   -3.838 5.494
+Largest Pareto k before refitting (points above 0.7 refitted exactly): one drift 0.64 (0 refitted); 20% 0.75 (2 refitted); 30% 0.82 (1 refitted) 
+
+======== Price: info ========
+
+One drift
+  Intercept     10.932 [ 10.758,  11.108]
+  cps           -0.012 [ -0.202,   0.182]
+  ell            0.349 [  0.064,   0.633]
+  trend         -0.064 [ -0.124,  -0.006]
+  sigma          0.231 [  0.176,   0.307]
+  max R-hat 1.0019; min bulk ESS 3180; min tail ESS 3674; divergent transitions 0
+
+Switch at 20% ownership (1992.44)
+  Intercept     11.207 [ 11.048,  11.364]
+  cps            0.036 [ -0.116,   0.184]
+  ell            0.351 [  0.125,   0.592]
+  pre            0.056 [ -0.012,   0.127]
+  post          -0.081 [ -0.128,  -0.030]
+  sigma          0.175 [  0.133,   0.236]
+  d2 - d1       -0.138 [ -0.194,  -0.080]
+  max R-hat 1.0016; min bulk ESS 2832; min tail ESS 3434; divergent transitions 0
+
+Switch at 30% ownership (1995.96)
+  Intercept     11.076 [ 10.887,  11.271]
+  cps            0.069 [ -0.062,   0.207]
+  ell            0.479 [  0.274,   0.697]
+  pre            0.048 [ -0.009,   0.109]
+  post          -0.064 [ -0.107,  -0.021]
+  sigma          0.152 [  0.112,   0.207]
+  d2 - d1       -0.112 [ -0.151,  -0.076]
+  max R-hat 1.0016; min bulk ESS 2170; min tail ESS 2507; divergent transitions 0
+
+Leave-one-out comparison (elpd difference from the best model, with its standard error)
+              elpd_diff se_diff elpd_loo p_loo
+switch at 30%     0.000   0.000   4.0356 6.063
+switch at 20%    -4.328   1.835  -0.2921 7.213
+one drift       -10.351   5.895  -6.3151 5.755
+Largest Pareto k before refitting (points above 0.7 refitted exactly): one drift 0.84 (1 refitted); 20% 0.97 (2 refitted); 30% 0.77 (2 refitted) 
+
+======== Price: business ========
+
+One drift
+  Intercept     10.923 [ 10.748,  11.106]
+  cps           -0.018 [ -0.208,   0.173]
+  ell            0.428 [  0.017,   0.832]
+  trend         -0.069 [ -0.133,  -0.005]
+  sigma          0.236 [  0.180,   0.313]
+  max R-hat 1.0013; min bulk ESS 2751; min tail ESS 3534; divergent transitions 0
+
+Switch at 20% ownership (1992.44)
+  Intercept     11.209 [ 11.048,  11.371]
+  cps            0.029 [ -0.122,   0.184]
+  ell            0.469 [  0.152,   0.808]
+  pre            0.061 [ -0.013,   0.137]
+  post          -0.079 [ -0.130,  -0.025]
+  sigma          0.177 [  0.134,   0.241]
+  d2 - d1       -0.140 [ -0.197,  -0.084]
+  max R-hat 1.0009; min bulk ESS 2350; min tail ESS 3191; divergent transitions 0
+
+Switch at 30% ownership (1995.96)
+  Intercept     11.096 [ 10.897,  11.308]
+  cps            0.066 [ -0.072,   0.201]
+  ell            0.653 [  0.351,   0.984]
+  pre            0.056 [ -0.008,   0.121]
+  post          -0.060 [ -0.107,  -0.009]
+  sigma          0.155 [  0.115,   0.211]
+  d2 - d1       -0.116 [ -0.153,  -0.078]
+  max R-hat 1.0018; min bulk ESS 1815; min tail ESS 2085; divergent transitions 0
+
+Leave-one-out comparison (elpd difference from the best model, with its standard error)
+              elpd_diff se_diff elpd_loo p_loo
+switch at 30%     0.000   0.000   3.5739 5.907
+switch at 20%    -4.318   1.740  -0.7439 7.274
+one drift       -10.498   6.554  -6.9241 5.858
+Largest Pareto k before refitting (points above 0.7 refitted exactly): one drift 0.78 (1 refitted); 20% 0.92 (2 refitted); 30% 0.96 (1 refitted) 
+
+======== Check: CPS thresholds alone (one survey and one imputation, so no offset), main price ========
+The step-5 validation found CPS thresholds falling more slowly than the CE's in the years both surveys cover.
+
+CPS alone, one drift
+  Intercept     10.773 [ 10.718,  10.825]
+  ell            0.323 [  0.147,   0.491]
+  trend         -0.012 [ -0.062,   0.036]
+  sigma          0.014 [  0.001,   0.062]
+  max R-hat 1.0020; min bulk ESS 1717; min tail ESS 2169; divergent transitions 0
+
+CPS alone, switch at 20% (1992.44)
+  Intercept     10.760 [ 10.571,  10.930]
+  ell            0.380 [  0.044,   0.750]
+  pre           -0.005 [ -0.065,   0.057]
+  post           0.006 [ -0.098,   0.122]
+  sigma          0.019 [  0.002,   0.085]
+  d2 - d1        0.013 [ -0.050,   0.079]
+  max R-hat 1.0029; min bulk ESS 1169; min tail ESS 995; divergent transitions 0
+
+CPS alone, switch at 30% (1995.96)
+  Intercept     10.736 [ 10.585,  10.900]
+  ell            0.299 [  0.061,   0.568]
+  pre           -0.015 [ -0.072,   0.047]
+  post          -0.020 [ -0.095,   0.069]
+  sigma          0.017 [  0.002,   0.085]
+  d2 - d1       -0.005 [ -0.038,   0.037]
+  max R-hat 1.0033; min bulk ESS 1181; min tail ESS 1196; divergent transitions 0
+
+Leave-one-out comparison, CPS alone
+              elpd_diff se_diff elpd_loo p_loo
+one drift         0.000  0.0000   11.193 3.726
+switch at 30%    -2.050  0.6201    9.143 5.365
+switch at 20%    -2.761  1.4126    8.432 5.856
+Largest Pareto k before refitting (points above 0.7 refitted exactly): one drift 1.04 (1 refitted); 20% 0.98 (2 refitted); 30% 0.90 (2 refitted) 
+
+Posterior predictive check (main price, switch at 20%): observed thresholds inside 90% predictive intervals
+  27 of 28 inside; outside: CPS 1993
+
+Wrote data/processed/cps_switch.csv and output/cps_switch.pdf

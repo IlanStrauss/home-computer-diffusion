@@ -1,0 +1,49 @@
+Households: 604,518 (178,891 CE, 425,627 CPS); in the paper's estimates: 548,284 (369,393 CPS)
+
+Computer ownership rate (% of households, weighted), by survey and year
+survey    CE   CPS
+year              
+1984     NaN   8.2
+1989     NaN  15.0
+1993     NaN  23.0
+1994    23.8   NaN
+1995    26.6   NaN
+1996    30.8   NaN
+1997    35.2  36.8
+1998    40.8  42.3
+1999    44.5   NaN
+2000    50.1  51.1
+2001    56.9  56.6
+2002    60.3   NaN
+2003    64.2  61.8
+2004    67.9   NaN
+2005    68.5   NaN
+2006    71.6   NaN
+2007    73.9   NaN
+2008    75.8   NaN
+2009    77.3   NaN
+2010    79.3   NaN
+2011    80.4   NaN
+2012    80.5   NaN
+2013    80.6   NaN
+
+Share missing, by survey
+survey            CE    CPS
+owns_computer  0.000  0.008
+weight         0.000  0.000
+in_paper       0.000  0.000
+age            0.000  0.000
+sex            0.000  0.000
+race3          0.000  0.000
+hisp           0.000  0.007
+married        0.000  0.000
+kids           0.000  0.000
+persons        0.000  0.000
+educ4          0.000  0.000
+state          0.147  0.000
+region         0.012  0.000
+spending       0.000  1.000
+income         0.189  1.000
+income_lo      1.000  0.122
+income_hi      1.000  0.122
+pc_price       0.000  0.000

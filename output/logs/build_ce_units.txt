@@ -1,0 +1,40 @@
+Units with an inventory record: 178,920
+Dropped, long-run spending not positive: 29
+
+Units in the sample: 178,891
+
+By year: units, weighted ownership (%), weighted median long-run spending ($), mean interviews per unit, share of each quarter's weight (Q1-Q4), share of zero replicate weights
+      units  own_pct  median_s  interviews    q1    q2    q3    q4  zero_rep
+year                                                                        
+1994   9966     23.8   19220.0        2.70  0.25  0.25  0.25  0.25       0.5
+1995   6153     26.6   19724.0        2.87  0.25  0.25  0.25  0.25       0.5
+1996   9664     30.8   19954.0        2.64  0.25  0.25  0.25  0.25       0.5
+1997   7020     35.2   21070.0        3.12  0.25  0.25  0.25  0.25       0.5
+1998   7023     40.8   21471.0        3.11  0.25  0.25  0.25  0.25       0.5
+1999  11003     44.5   21846.0        2.94  0.25  0.25  0.25  0.25       0.5
+2000   9725     50.1   22417.0        3.12  0.25  0.25  0.25  0.25       0.5
+2001   9436     56.9   23072.0        3.13  0.25  0.25  0.25  0.25       0.5
+2002   9969     60.3   23521.0        3.13  0.25  0.25  0.25  0.25       0.5
+2003  10246     64.2   23578.0        3.10  0.25  0.25  0.25  0.25       0.5
+2004   9936     67.9   24842.0        2.85  0.25  0.25  0.25  0.25       0.5
+2005  13743     68.5   26037.0        2.55  0.25  0.25  0.25  0.25       0.5
+2006   9248     71.6   27967.0        3.07  0.25  0.25  0.25  0.25       0.5
+2007   8680     73.9   29896.0        3.11  0.25  0.25  0.25  0.25       0.5
+2008   8976     75.8   30768.0        3.07  0.25  0.25  0.25  0.25       0.5
+2009   9098     77.3   29594.0        3.10  0.25  0.25  0.25  0.25       0.5
+2010   9214     79.3   29394.0        3.04  0.25  0.25  0.25  0.25       0.5
+2011   8809     80.4   30712.0        3.06  0.25  0.25  0.25  0.25       0.5
+2012   8779     80.5   31033.0        3.06  0.25  0.25  0.25  0.25       0.5
+2013   2203     80.6   31061.0        2.99  1.00  0.00  0.00  0.00       0.5
+
+Months from the inventory to the first record, by first-record interview number
+months_back    0       3      6      9      12
+interview                                     
+2               0  131758      0      0      0
+3            1684       0  17314      0      0
+4            1641       0      0  12731      0
+5            1587       0      0      0  12176
+
+Units with a reference month before 1994: 1,287; latest reference month: 2012-12
+
+Standard deviation of log spending across a unit's interviews (units with 2+ positive interviews): median 0.188, mean 0.230
