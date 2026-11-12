@@ -2,14 +2,15 @@
 
 1. ownership.pdf: ownership by year (CPS and CE) and raw ownership by long-run spending, no model.
 2. prices.pdf: the log computer price under each concept.
-3. thresholds.pdf: yearly spending thresholds, baseline to extended regression, with the fitted second stage and the pure-affordability path.
+3. thresholds.pdf: yearly spending thresholds in the baseline and extended regressions, with the fitted second stage and the
+   pure-affordability path. thresholds_all.pdf (appendix) adds the two intermediate fits.
 4. b_and_d.pdf: b and d in every specification (main price).
 5. cps_ce.pdf: CPS and CE spending thresholds, 1984-2013, and the imputation check on CE units.
 6. switch.pdf: the unexplained trend before and after the switch (CPS extension).
 7. joint.pdf: spending thresholds from the joint model against the two-stage estimates.
 8. income_price.pdf: where the spending threshold sits, and who a price fall reaches (code/income_price.py).
-9. price_effect.pdf: b and d of the four CE regressions and the joint model in percentages: the fall in the spending threshold from a 10%
-   fall in the price, and the unexplained trend a year.
+9. price_effect.pdf: b and d of the baseline and extended regressions in percentages: the fall in the spending threshold from a
+   10% fall in the price, and the unexplained trend a year (every specification is in b_and_d.pdf).
 10. paths.pdf: ownership, 1994-2012, when only the real price or only real spending moves from its 1994 value
    (code/income_price.py, part G).
 11. fifths.pdf: raw ownership by income fifth (the CE's income rank, complete income reporters), and the gap
@@ -76,8 +77,10 @@ def fig1():
 
     fig, axes = plt.subplots(1, 2, figsize=(6.6, 2.7))
     ax = axes[0]
-    ax.plot(cps.index, cps, "^-", color=VERMILLION, ms=4, lw=1, label="CPS (households, survey month)")
-    ax.plot(ce.index + 0.5, ce, "o-", color=BLACK, ms=3, lw=1, label="CE (consumer units, year average)")
+    ax.plot(cps.index, cps, "^-", color=VERMILLION, ms=4, lw=1)
+    ax.plot(ce.index + 0.5, ce, "o-", color=BLACK, ms=3, lw=1)
+    ax.text(1984.6, 46, "CPS (households,\nsurvey month)", color=VERMILLION, fontsize=6.8, va="center")
+    ax.text(2004.0, 44, "CE (consumer units,\nyear average)", color=BLACK, fontsize=6.8, va="center")
     for lev, (name, t), ha, dx in zip([20, 30], SWITCH.items(), ["right", "left"], [-0.3, 0.3]):
         ax.axhline(lev, color=MUTED, lw=0.6, ls="--")
         ax.axvline(t, color=MUTED, lw=0.6, ls=":")
@@ -86,7 +89,6 @@ def fig1():
     ax.set_ylabel("own a computer (%)")
     ax.set_ylim(0, 90)
     ax.set_title("(a) Ownership, 1984–2013")
-    ax.legend(loc="lower right", fontsize=7)
     grid(ax)
 
     ax = axes[1]
@@ -103,10 +105,10 @@ def fig1():
     ax.set_ylabel("own a computer (%)")
     ax.set_ylim(0, 100)
     ax.set_title("(b) Ownership by spending, CE, no model")
-    ax.legend(title="year", loc="lower right", title_fontsize=7.5)
+    ax.legend(loc="upper center", bbox_to_anchor=(0.5, -0.24), ncol=5, handlelength=1.4, columnspacing=0.9, fontsize=7)
     grid(ax)
     fig.tight_layout()
-    fig.savefig(f"{FIG}/ownership.pdf")
+    fig.savefig(f"{FIG}/ownership.pdf", bbox_inches="tight")
     plt.close(fig)
 
 
@@ -150,33 +152,37 @@ def fig2():
 
 
 def fig3():
-    print("thresholds.pdf")
+    print("thresholds.pdf, thresholds_all.pdf")
     if not have("output/results/second_stage_fitted.csv", "output/results/second_stage.csv"):
         return
     f = pd.read_csv("output/results/second_stage_fitted.csv")
     titles = {"s1": "Baseline: observed spending, geography", "s2": "+ spending corrected for noise",
               "s3": "+ household traits", "s4": "+ education: extended regression"}
-    fig, axes = plt.subplots(2, 2, figsize=(6.6, 5.0), sharex=True)
-    for ax, (s, title) in zip(axes.flat, titles.items()):
-        d = f[f.spec == s]
-        ax.fill_between(d.year, d.pred_lo, d.pred_hi, color="#EDEDED", lw=0, label="posterior predictive, 90%")
-        ax.fill_between(d.year, d.fit_lo, d.fit_hi, color=BLUE, alpha=0.22, lw=0)
-        ax.plot(d.year, d.fit, color=BLUE, lw=1.3, label=r"fitted $a + b\,\ell_t + d\,(t-1994)$, 90%")
-        ax.plot(d.year, d.fit.iloc[0] + d.ell, color=VERMILLION, ls="--", lw=1.1,
-                label=r"pure affordability: 1994 fit $+\ \ell_t$")
-        ax.errorbar(d.year, d.tau, yerr=Z90 * d.se_tau, fmt="o", color=BLACK, ms=2.6, lw=0.8, capsize=0,
-                    label=r"estimated $\tau_t$, 90%")
-        ax.set_title(title)
-        ax.set_ylabel(r"spending threshold $\tau_t$ (log \$ a year)")
-        lo = min(d.tau.min(), d.pred_lo.min()) - 0.3
-        ax.set_ylim(min(lo, (d.fit.iloc[0] + d.ell).min() - 0.1), max(d.tau.max(), d.pred_hi.max()) + 0.3)
-        grid(ax)
-    for ax in axes[1]:
-        ax.set_xlabel("year")
-    axes[0, 0].legend(loc="lower left", fontsize=6.5)
-    fig.tight_layout()
-    fig.savefig(f"{FIG}/thresholds.pdf")
-    plt.close(fig)
+    # the main text shows the baseline and extended regressions; the appendix adds the two intermediate fits
+    for name, specs, shape, size in [("thresholds", ["s1", "s4"], (1, 2), (6.6, 2.9)),
+                                     ("thresholds_all", ["s1", "s2", "s3", "s4"], (2, 2), (6.6, 5.0))]:
+        fig, axes = plt.subplots(*shape, figsize=size, sharex=True, squeeze=False)
+        for ax, s in zip(axes.flat, specs):
+            d = f[f.spec == s]
+            ax.fill_between(d.year, d.pred_lo, d.pred_hi, color="#EDEDED", lw=0, label="posterior predictive, 90%")
+            ax.fill_between(d.year, d.fit_lo, d.fit_hi, color=BLUE, alpha=0.22, lw=0)
+            ax.plot(d.year, d.fit, color=BLUE, lw=1.3, label=r"fitted $a + b\,\ell_t + d\,(t-1994)$, 90%")
+            ax.plot(d.year, d.fit.iloc[0] + d.ell, color=VERMILLION, ls="--", lw=1.1,
+                    label=r"pure affordability: 1994 fit $+\ \ell_t$")
+            ax.errorbar(d.year, d.tau, yerr=Z90 * d.se_tau, fmt="o", color=BLACK, ms=2.6, lw=0.8, capsize=0,
+                        label=r"estimated $\tau_t$, 90%")
+            ax.set_title(titles[s])
+            ax.set_ylabel(r"spending threshold $\tau_t$ (log \$ a year)")
+            lo = min(d.tau.min(), d.pred_lo.min()) - 0.3
+            ax.set_ylim(min(lo, (d.fit.iloc[0] + d.ell).min() - 0.1), max(d.tau.max(), d.pred_hi.max()) + 0.3)
+            grid(ax)
+        for ax in axes[-1]:
+            ax.set_xlabel("year")
+        handles, labels = axes[0, 0].get_legend_handles_labels()
+        fig.tight_layout()
+        fig.legend(handles, labels, loc="upper center", bbox_to_anchor=(0.5, 0.0), ncol=2, fontsize=7)
+        fig.savefig(f"{FIG}/{name}.pdf", bbox_inches="tight")
+        plt.close(fig)
 
 
 def fig4():
@@ -209,7 +215,8 @@ def fig4():
         ax.hlines(y, r[f"{p}_lo"], r[f"{p}_hi"], color=col, lw=1)
         ax.scatter(r[p], y, color=col, s=12, zorder=3)
         for v in ref:
-            ax.axvline(v, color=VERMILLION if (p == "b" and v == 1) else MUTED, lw=0.8, ls="--" if v == 0 else "-")
+            ax.axvline(v, color=VERMILLION if (p == "b" and v == 1) else MUTED, lw=1.0 if v == 1 else 0.8,
+                       ls=":" if v == 1 else "--")
         ax.set_xlabel(lab)
         grid(ax)
     axes[0].set_yticks(y)
@@ -240,7 +247,7 @@ def fig5():
     ax.set_xlabel("year")
     ax.set_ylabel(r"spending threshold $\tau$ (log \$ a year)")
     ax.set_title("(a) Spending thresholds, CPS specification")
-    ax.legend(loc="upper right")
+    ax.legend(loc="upper center", bbox_to_anchor=(0.5, -0.2), ncol=2)
     grid(ax)
     ax = axes[1]
     ax.plot(v.year, v.ce_units_corrected_tau, "o-", color=BLACK, ms=3, label="CE units, corrected spending")
@@ -249,10 +256,10 @@ def fig5():
     ax.set_xlabel("year")
     ax.set_ylabel(r"spending threshold $\tau$ (log \$ a year)")
     ax.set_title("(b) Imputation check, 1997–2003")
-    ax.legend(loc="lower left", fontsize=6.8)
+    ax.legend(loc="upper center", bbox_to_anchor=(0.5, -0.2), ncol=1, fontsize=6.8)
     grid(ax)
     fig.tight_layout()
-    fig.savefig(f"{FIG}/cps_ce.pdf")
+    fig.savefig(f"{FIG}/cps_ce.pdf", bbox_inches="tight")
     plt.close(fig)
 
 
@@ -302,10 +309,10 @@ def fig7():
     ax.set_xlabel("year")
     ax.set_ylabel(r"spending threshold $\tau_t$ (log \$ a year)")
     ax.set_title("Joint model against the two-stage spending thresholds")
-    ax.legend(loc="upper right")
+    ax.legend(loc="upper center", bbox_to_anchor=(0.5, -0.2), ncol=2)
     grid(ax)
     fig.tight_layout()
-    fig.savefig(f"{FIG}/joint.pdf")
+    fig.savefig(f"{FIG}/joint.pdf", bbox_inches="tight")
     plt.close(fig)
 
 
@@ -329,26 +336,27 @@ def fig8():
     ax = axes[1]
     for yr, c, (dx, dy) in [(1994, VERMILLION, (-4, 0.06)), (2003, ORANGE, (4, 0.07)), (2012, BLUE, (6, 0.0))]:
         d = p[p.year == yr]
-        ax.plot(d.pct, d.dpr_price10, color=c, label=str(yr))
+        ax.plot(d.pct, d.dpr_price10, color=c)
         k = d.dpr_price10.idxmax()
         ax.text(d.pct[k] + dx, d.dpr_price10[k] + dy, str(yr), color=INK, fontsize=6.5,
                 ha="right" if dx < 0 else "left", va="bottom")
     ax.set_ylim(0, 2.25)
     ax.set_xlabel("household's percentile of long-run spending")
     ax.set_ylabel("rise in probability of owning\n(percentage points)")
-    ax.set_title("(b) Who a 10% price fall reaches", loc="left")
-    ax.legend(loc="upper center", ncol=3, handlelength=1.0, columnspacing=0.6, handletextpad=0.4)
+    ax.set_title("(b) Who a 10% price fall helps", loc="left")
     grid(ax)
     ax = axes[2]
     ax.fill_between(y.year, y.dP_price10_lo, y.dP_price10_hi, color=BLACK, alpha=0.12, lw=0)
-    ax.plot(y.year, y.dP_spend10, color=MUTED, ls="--", label="spending up 10%")
-    ax.plot(y.year, y.dP_price10, color=BLACK, label="price down 10%")
+    ax.plot(y.year, y.dP_spend10, color=MUTED, ls="--")
+    ax.plot(y.year, y.dP_price10, color=BLACK)
+    ax.text(2012.6, y.dP_spend10.iloc[-1], "spending\nup 10%", color=MUTED, fontsize=6.5, va="center")
+    ax.text(2012.6, y.dP_price10.iloc[-1], "price\ndown 10%", color=BLACK, fontsize=6.5, va="center")
     ax.set_ylim(0, 3.0)
-    ax.set_xticks([1995, 2000, 2005, 2010])
+    ax.set_xlim(1993.5, 2018.5)
+    ax.set_xticks([1995, 2003, 2011])
     ax.set_xlabel("year")
     ax.set_ylabel("rise in ownership\n(percentage points)")
     ax.set_title("(c) All households", loc="left")
-    ax.legend(loc="lower center")
     grid(ax)
     fig.tight_layout(w_pad=1.2)
     fig.savefig(f"{FIG}/income_price.pdf")
@@ -357,35 +365,30 @@ def fig8():
 
 def fig9():
     print("price_effect.pdf")
-    if not have("output/results/second_stage.csv", "output/results/joint_model.csv"):
+    if not have("output/results/second_stage.csv"):
         return
     r = pd.read_csv("output/results/second_stage.csv")
     r = r[(r.concept == "pc") & (r.model == "independent errors")].set_index("spec")
-    j = pd.read_csv("output/results/joint_model.csv").set_index("variable")
     cols = ["b", "b_lo", "b_hi", "d", "d_lo", "d_hi"]
-    rows = [("Baseline: observed spending, state or region", r.loc["s1", cols].to_numpy(float)),
-            ("+ spending corrected for noise", r.loc["s2", cols].to_numpy(float)),
-            ("+ household traits", r.loc["s3", cols].to_numpy(float)),
-            ("+ education of household head (extended)", r.loc["s4", cols].to_numpy(float)),
-            ("Extended regression as one joint model",
-             np.r_[j.loc["b", ["median", "q05", "q95"]].to_numpy(float), j.loc["d", ["median", "q05", "q95"]].to_numpy(float)])]
+    rows = [("Baseline regression", r.loc["s1", cols].to_numpy(float)),
+            ("Extended regression", r.loc["s4", cols].to_numpy(float))]    # every specification: b_and_d.pdf
     fall = lambda b: 100 * (1 - 0.9 ** b)    # % fall in the spending threshold when the price falls 10%
     trend = lambda d: 100 * np.expm1(d)      # % change in the spending threshold a year
     y = np.arange(len(rows))[::-1]
-    fig, axes = plt.subplots(1, 2, figsize=(6.6, 2.3), sharey=True, gridspec_kw={"width_ratios": [1.15, 1]})
+    fig, axes = plt.subplots(1, 2, figsize=(6.6, 1.75), sharey=True, gridspec_kw={"width_ratios": [1.15, 1]})
     for (lab, v), yy in zip(rows, y):
         axes[0].hlines(yy, fall(v[1]), fall(v[2]), color=BLACK, lw=1.2)
         axes[0].scatter(fall(v[0]), yy, color=BLACK, s=14, zorder=3)
         axes[0].text(fall(v[2]) + 0.25, yy, f"{fall(v[0]):.1f}%", va="center", fontsize=6.8, color=INK)
         axes[1].hlines(yy, trend(v[4]), trend(v[5]), color=BLACK, lw=1.2)
         axes[1].scatter(trend(v[3]), yy, color=BLACK, s=14, zorder=3)
-    axes[0].axvline(10, color=VERMILLION, lw=1)
+    axes[0].axvline(10, color=VERMILLION, lw=1.1, ls=":")
     axes[0].text(9.85, y[0] + 0.45, "pure affordability: 10%", color=VERMILLION, fontsize=6.8, ha="right", va="center")
     axes[0].set_xlim(0, 11)
     axes[0].set_ylim(-0.6, len(rows) - 0.2)
     axes[0].set_xlabel("fall in the spending threshold when\nthe quality-adjusted computer\nprice falls 10% (%)")
     axes[0].set_title("(a) Price effect", loc="left")
-    axes[1].axvline(0, color=VERMILLION, lw=1)
+    axes[1].axvline(0, color=VERMILLION, lw=1.1, ls=":")
     axes[1].text(-0.25, y[0] + 0.45, "pure affordability: 0%", color=VERMILLION, fontsize=6.8, ha="right", va="center")
     axes[1].set_xlim(-5, 5)
     axes[1].set_xlabel("unexplained trend in\nthe spending threshold\n(% a year)")
@@ -421,10 +424,10 @@ def fig10():
     ax.set_ylim(0, 100)
     ax.set_xlabel("year")
     ax.set_ylabel("households that own a computer (%)")
-    ax.legend(loc="upper left", fontsize=7)
+    ax.legend(loc="upper center", bbox_to_anchor=(0.5, -0.18), ncol=2, fontsize=7)
     grid(ax)
     fig.tight_layout()
-    fig.savefig(f"{FIG}/paths.pdf")
+    fig.savefig(f"{FIG}/paths.pdf", bbox_inches="tight")
     plt.close(fig)
 
 
@@ -451,7 +454,7 @@ def fig11():
     ax.set_xlabel("year")
     ax.set_ylabel("households that own a computer (%)")
     ax.set_title("(a) By fifth of household income", loc="left")
-    ax.legend(loc="lower right", fontsize=6.8)
+    handles, labels = ax.get_legend_handles_labels()
     grid(ax)
     ax = axes[1]
     ax.plot(gap.index, gap, "o-", color=BLACK, ms=2.6, lw=1.1)
@@ -465,7 +468,8 @@ def fig11():
     ax.set_title("(b) Richest minus poorest fifth", loc="left")
     grid(ax)
     fig.tight_layout(w_pad=1.2)
-    fig.savefig(f"{FIG}/fifths.pdf")
+    fig.legend(handles, labels, loc="upper center", bbox_to_anchor=(0.5, 0.0), ncol=5, fontsize=7)
+    fig.savefig(f"{FIG}/fifths.pdf", bbox_inches="tight")
     plt.close(fig)
 
 
@@ -552,10 +556,10 @@ def fig13():
     ax.set_ylim(-0.7, len(work) - 0.3)
     ax.set_xlabel("employed adults who used it at work (%)")
     ax.set_title("(b) Use at work by education", loc="left")
-    ax.legend(loc="upper right", fontsize=6.6)
+    ax.legend(loc="upper center", bbox_to_anchor=(0.45, -0.3), ncol=1, fontsize=6.8)
     grid(ax)
     fig.tight_layout(w_pad=1.0)
-    fig.savefig(f"{FIG}/ai_pc.pdf")
+    fig.savefig(f"{FIG}/ai_pc.pdf", bbox_inches="tight")
     plt.close(fig)
 
 

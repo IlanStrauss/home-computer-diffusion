@@ -39,4 +39,4 @@ run joint_model.py
 run joint_design_effect.py
 python3 code/figures.py
 python3 code/tables.py
-echo "$(date +%H:%M:%S) Done. To compile the paper: cd writeup && tectonic household_pc_results.tex"
+echo "$(date +%H:%M:%S) Done. To compile the paper and the online appendix, see step 4 of README.md."

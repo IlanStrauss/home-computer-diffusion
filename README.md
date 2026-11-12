@@ -1,10 +1,10 @@
 # How Will Paid AI Spread? Evidence from Home Computers in US Households, 1984–2013
 
-This repository holds the paper, its data, and the code that builds every figure and table in it from the original survey files. The paper is [writeup/household_pc_results.pdf](writeup/household_pc_results.pdf) (draft of November 2026).
+This repository holds the paper, its data, and the code that builds every figure and table in it from the original survey files. The paper is [writeup/household_pc_results.pdf](writeup/household_pc_results.pdf) (draft of November 2026), and its online appendix, which describes how we built the dataset and gives the method and the remaining estimates in detail, is [writeup/online_appendix.pdf](writeup/online_appendix.pdf).
 
 ## Abstract
 
-The spread of home computers through US households is a guide to how paid AI may spread. Every household faced the same falling computer prices, but *poorer households gained from falling prices last*. The poorest fifth of US households, ranked by income, matched the richest fifth's 1996 computer ownership rate, about 60%, only in 2012. We study the spread of home computers with 178,891 households interviewed in the Consumer Expenditure Survey from January 1994 to March 2013, the Bureau of Economic Analysis computer price index, and, for the years back to 1984, 369,393 households in eight Current Population Survey supplements from October 1984 to October 2003. Our findings cover 1994 to 2012, since 2012 is the last full year of Consumer Expenditure Survey data. Over those years the share of US households that owned a computer rose from 24% to 81%. We find three key results. First, *falling quality-adjusted computer prices, far more than rising incomes*, paced that rise. Falling prices account for 53 of its 57 percentage points and rising household spending for 3, even though the median price paid for a computer fell only 7% from 1994 to 2012. Second, the gap in computer ownership between rich and poor households *widened, then narrowed*. The share of households that owned a computer was 39 percentage points higher in the richest fifth than in the poorest fifth in 1994, 54 points higher in 2003, and 37 points higher in 2012. A price cut is most likely to tip households close to affording a computer into buying one, and the households close to affording one were richer households in the 1990s and poorer households in the 2000s. Third, falling prices *left the education gap in computer ownership in place*. In 1994, 45% of households headed by a college graduate owned a computer, against 15% of households headed by a high-school graduate. This gap of 30 percentage points in computer ownership grew to 39 points in 1997 and narrowed only after 2001, once most college households owned a computer. Among households with equal spending, the education gap in computer ownership did not narrow from 1994 to 2012. If paid AI follows this pattern, paid AI may reach lower-income households *more than a decade after richer households*, unless policy subsidizes their access to paid AI and helps them learn to use it. Cheaper AI alone may leave more educated households ahead, and once most households pay for AI, a given income gain would raise paid AI use most if it went to the bottom half of households. Policymakers will also need a quality-adjusted price index for AI services to track how affordable AI is becoming.
+The spread of home computers through US households is a guide to how paid AI may spread. Every household faced the same falling computer prices, but a price cut does most for households close to affording a computer, so *poorer households gained from falling prices last*. The poorest fifth of US households, ranked by income, matched the richest fifth's 1996 computer ownership rate, about 60%, only in 2012. We study 178,891 households in the Consumer Expenditure Survey (January 1994 to March 2013), 369,393 households in eight Current Population Survey supplements (October 1984 to October 2003), and the Bureau of Economic Analysis computer price index. We find three key results. First, *falling quality-adjusted computer prices, far more than rising incomes*, paced the rise in the share of US households that owned a computer, from 24% in 1994 to 81% in 2012, and accounted for 53 of its 57 percentage points. Second, the gap in computer ownership between the richest and poorest fifths of households *widened, then narrowed*, from 39 percentage points in 1994 to 54 in 2003 and 37 in 2012. Third, falling prices *left the education gap in computer ownership in place*. Averaged over 1994–2012, a household headed by a college graduate was as likely to own a computer as a household headed by a high-school graduate that spent 2.8 times as much. If paid AI follows this pattern, paid AI may reach lower-income households *more than a decade after richer households*, unless policy subsidizes their access and helps them learn to use it.
 
 ## What is in the repository
 
@@ -16,7 +16,7 @@ The spread of home computers through US households is a guide to how paid AI may
   - `results/` has the estimates, as CSV files that `figures.py` and `tables.py` read;
   - `logs/` has the log of each script, and every number in the paper appears in one of them;
   - `diagnostics/` has the plots we checked before and after fitting.
-- `writeup/` holds the paper, `household_pc_results.tex` and its compiled PDF, with the `figures/` and `tables/` it inputs.
+- `writeup/` holds the paper, `household_pc_results.tex`, and its online appendix, `online_appendix.tex`, with their compiled PDFs and the `figures/` and `tables/` they input.
 - `run_all.sh` runs every script in order.
 
 ## The combined household file
@@ -36,7 +36,7 @@ All data come from US government statistical agencies and are public. We had leg
 | NIPA flat file of annual values, `NipaDataA.txt`, release of 4 November 2026 | Bureau of Economic Analysis, https://apps.bea.gov/national/Release/TXT/ | Yes, in `data/raw/prices/`, because BEA replaces the file with each release |
 | CPI-U for personal computers and peripheral equipment, `CUUR0000SEEE01` | Bureau of Labor Statistics, via FRED, https://fred.stlouisfed.org/series/CUUR0000SEEE01 | Yes, in `data/raw/prices/` |
 
-`data/raw/CHECKSUMS.sha256` lists the SHA-256 checksum of every raw file the code reads, and `code/get_raw_data.sh` reports any file that is missing or differs from the one the paper used. Figure 9 also plots published numbers on generative AI use from Bick, Blandin, and Deming (Federal Reserve Bank of St. Louis, 13 November 2025, and NBER Working Paper 32966), which `code/figures.py` types in with their sources.
+`data/raw/CHECKSUMS.sha256` lists the SHA-256 checksum of every raw file the code reads, and `code/get_raw_data.sh` reports any file that is missing or differs from the one the paper used. Figure 8 also plots published numbers on generative AI use from Bick, Blandin, and Deming (Federal Reserve Bank of St. Louis, 13 November 2025, and NBER Working Paper 32966), which `code/figures.py` types in with their sources.
 
 ## Licenses
 
@@ -46,7 +46,7 @@ The code is under the MIT License ([LICENSE](LICENSE)). The data files in `data/
 
 - Python 3.9.6 with numpy 1.26.4, pandas 2.3.3, scipy 1.13.1, statsmodels 0.14.6, matplotlib 3.9.4, and cmdstanpy 1.3.0 with CmdStan 2.39.0.
 - R 4.5.1 with brms 2.23.0, rstan 2.32.7, loo 2.8.0, and posterior 1.6.1.
-- `curl`, `unzip`, and `shasum`, and, for the paper, `tectonic` or another LaTeX distribution with the `caption` package.
+- `curl`, `unzip`, and `shasum`, and, for the paper, `tectonic` or another LaTeX distribution with the `caption` and `xr-hyper` packages.
 
 To install the Python and R packages:
 
@@ -69,7 +69,13 @@ The full run takes about 90 minutes on a laptop with a 10-core Apple M4 processo
    ```
 2. Get the raw files. Download the 20 CE files `intrvw94.zip` to `intrvw13.zip` (Interview Survey, comma-delimited) in a browser from https://www.bls.gov/cex/pumd_data.htm into `data/raw/ce/`. Then run `sh code/get_raw_data.sh`, which downloads the CPS files and checks every raw file against `data/raw/CHECKSUMS.sha256`.
 3. Run `sh run_all.sh`. To skip the raw files and start from the datasets in `data/processed/`, run `sh run_all.sh analysis` instead.
-4. Compile the paper with `cd writeup && tectonic household_pc_results.tex`.
+4. Compile the paper and the online appendix. Each refers to the other through its `.aux` file, so compile the paper, then the online appendix, then the paper again:
+   ```sh
+   cd writeup
+   tectonic --keep-intermediates household_pc_results.tex
+   tectonic --keep-intermediates online_appendix.tex
+   tectonic --keep-intermediates household_pc_results.tex
+   ```
 
 ## Scripts, in run order
 
@@ -93,36 +99,37 @@ The full run takes about 90 minutes on a laptop with a 10-core Apple M4 processo
 | `joint_design_effect.py` | Compares the joint model's standard errors with the replicate standard errors | log only |
 | `figures.py`, `tables.py` | Write the figures and tables of the paper | `writeup/figures/`, `writeup/tables/` |
 
-`hhpc.py` holds the pieces the Python scripts share. In the code, the regressions keep the labels of the analysis plan: `s1` is the baseline regression, `s2` and `s3` add the noise correction and the household traits, and `s4` is the extended regression. Appendix D of the paper maps the plan to the paper.
+`hhpc.py` holds the pieces the Python scripts share. In the code, the regressions keep the labels of the analysis plan: `s1` is the baseline regression, `s2` and `s3` add the noise correction and the household traits, and `s4` is the extended regression. Online Appendix H maps the plan to the paper.
 
-## Figures and tables in the paper
+## Figures and tables
 
-| In the paper | File | Made by |
+| Where | File | Made by |
 |---|---|---|
 | Figure 1 | `writeup/figures/ownership.pdf` | `figures.py` |
 | Figure 2 | `writeup/figures/thresholds.pdf` | `figures.py` |
 | Figure 3 | `writeup/figures/price_effect.pdf` | `figures.py` |
 | Figure 4 | `writeup/figures/paths.pdf` | `figures.py` |
-| Figure 5 | `writeup/figures/prices.pdf` | `figures.py` |
-| Figure 6 | `writeup/figures/fifths.pdf` | `figures.py` |
-| Figure 7 | `writeup/figures/income_price.pdf` | `figures.py` |
-| Figure 8 | `writeup/figures/education.pdf` | `figures.py` |
-| Figure 9 | `writeup/figures/ai_pc.pdf` | `figures.py` |
-| Figure 10 | `writeup/figures/b_and_d.pdf` | `figures.py` |
-| Figure 11 | `writeup/figures/cps_ce.pdf` | `figures.py` |
-| Figure 12 | `writeup/figures/switch.pdf` | `figures.py` |
-| Figure 13 | `writeup/figures/joint.pdf` | `figures.py` |
-| Tables 1–3 | in `writeup/household_pc_results.tex`, from the logs in `output/logs/` | |
-| Table 4 | `writeup/tables/tab_second_stage.tex` | `tables.py` |
-| Table 5 | `writeup/tables/tab_education.tex` | `tables.py` |
-| Table 6 | `writeup/tables/tab_checks.tex` | `tables.py` |
-| Table 7 | `writeup/tables/tab_concepts.tex` | `tables.py` |
-| Table 8 | `writeup/tables/tab_switch.tex` | `tables.py` |
-| Table 9 | `writeup/tables/tab_joint.tex` | `tables.py` |
-| Table 10 | `writeup/tables/tab_links.tex` | `tables.py` |
-| Table 11 | `writeup/tables/tab_cps.tex` | `tables.py` |
-| Table 12 | `writeup/tables/tab_validation.tex` | `tables.py` |
-| Table 13 | `writeup/tables/tab_thresholds.tex` | `tables.py` |
+| Figure 5 | `writeup/figures/fifths.pdf` | `figures.py` |
+| Figure 6 | `writeup/figures/income_price.pdf` | `figures.py` |
+| Figure 7 | `writeup/figures/education.pdf` | `figures.py` |
+| Figure 8 | `writeup/figures/ai_pc.pdf` | `figures.py` |
+| Figure A1 | `writeup/figures/thresholds_all.pdf` | `figures.py` |
+| Figure A2 | `writeup/figures/b_and_d.pdf` | `figures.py` |
+| Figure A3 | `writeup/figures/prices.pdf` | `figures.py` |
+| Figure B1 | `writeup/figures/switch.pdf` | `figures.py` |
+| Tables 1, 2, and B1 | in `writeup/household_pc_results.tex`, from the logs in `output/logs/` | |
+| Table A1 | `writeup/tables/tab_second_stage.tex` | `tables.py` |
+| Table A2 | `writeup/tables/tab_checks.tex` | `tables.py` |
+| Table A3 | `writeup/tables/tab_education.tex` | `tables.py` |
+| Table A4 | `writeup/tables/tab_concepts.tex` | `tables.py` |
+| Online Appendix Table D1 | `writeup/tables/tab_links.tex` | `tables.py` |
+| Online Appendix Table E1 | `writeup/tables/tab_thresholds.tex` | `tables.py` |
+| Online Appendix Figure F1 | `writeup/figures/cps_ce.pdf` | `figures.py` |
+| Online Appendix Table F1 | `writeup/tables/tab_cps.tex` | `tables.py` |
+| Online Appendix Table F2 | `writeup/tables/tab_validation.tex` | `tables.py` |
+| Online Appendix Table F3 | `writeup/tables/tab_switch.tex` | `tables.py` |
+| Online Appendix Figure G1 | `writeup/figures/joint.pdf` | `figures.py` |
+| Online Appendix Table G1 | `writeup/tables/tab_joint.tex` | `tables.py` |
 
 ## How to cite
 
